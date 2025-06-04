@@ -1,0 +1,170 @@
+[
+    {
+        "text": "What should you do if you receive a suspicious email or message asking for personal details?",
+        "correctZone": "report"
+    },
+    {
+        "text": "If someone online asks for your home address, what should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "What should you do if someone sends you a link claiming you won a prize?",
+        "correctZone": "report"
+    },
+    {
+        "text": "If a friend sends you a message asking for your password, what should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "What action should you take if you see someone being bullied online?",
+        "correctZone": "report"
+    },
+    {
+        "text": "If someone asks to meet you in person after talking online, what should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "What should you do if an unknown account starts messaging you frequently?",
+        "correctZone": "report"
+    },
+    {
+        "text": "How should you respond if someone posts something upsetting about you online?",
+        "correctZone": "report"
+    },
+    {
+        "text": "What should you do if a website asks for your personal information without explaining why?",
+        "correctZone": "report"
+    },
+    {
+        "text": "If someone shares inappropriate content with you online, what is the right course of action?",
+        "correctZone": "report"
+    },
+    {
+        "text": "What should you do if someone you don't know sends you a friend request?",
+        "correctZone": "report"
+    },
+    {
+        "text": "How should you react if a message makes you feel uncomfortable or unsafe?",
+        "correctZone": "report"
+    },
+    {
+        "text": "You receive an email saying you've won a free phone but must enter your credit card details to claim it. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "A stranger online asks you to send a picture of yourself. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "Someone sends you a message saying they are from your bank and need your password to verify your account. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "You see a post online spreading false information about someone in your school. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "An online gaming friend you’ve never met in real life asks for your phone number. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "You come across a website that asks you to enter personal information to access free games. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "A classmate shares a funny but mean-spirited meme about another student. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "You find a website selling very cheap branded clothes that looks suspicious. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "A pop-up ad appears claiming your computer has a virus and asks you to download a program to fix it. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "You receive a message from an unknown number asking you to click a link to claim a prize. What should you do?",
+        "correctZone": "report"
+    },
+    {
+        "text": "Your teacher sends you a message about your homework. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "A trusted friend shares a link to a school project. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your parent asks for your help to set up a new email account. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your school sends you a reminder about an upcoming event. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your sports coach sends you the schedule for your next match. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "A family member shares a picture of your recent vacation. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your teacher emails you feedback on your classwork. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your friend sends you a funny meme they found online. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your school principal sends an announcement about safety guidelines. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your trusted friend sends you a study resource for an upcoming test. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your school librarian emails you a list of recommended books for your class. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your classmate sends you a link to a study guide for an upcoming test. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your music teacher sends a schedule for the school concert rehearsals. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "A science club leader shares an online form to sign up for an upcoming event. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your sports team sends a message about an updated practice schedule. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your teacher sends a reminder about an assignment deadline. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your school nurse emails important health tips for flu season. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your cousin shares a fun educational game link from a trusted website. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your school principal announces a new rule about online safety during computer lab hours. What should you do?",
+        "correctZone": "accept"
+    },
+    {
+        "text": "Your parents send you a message reminding you about your bedtime. What should you do?",
+        "correctZone": "accept"
+    }
+]

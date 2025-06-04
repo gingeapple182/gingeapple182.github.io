@@ -1,0 +1,62 @@
+[
+    {
+        "question": "What should you keep private online?",
+        "answers": ["PASSWORD", "ADDRESS", "NAME", "LOCATION", "PHONENUMBER"]
+    },
+    {
+        "question": "Who should you tell if you see something scary or inappropriate online?",
+        "answers": ["PARENT", "TEACHER", "GUARDIAN", "ADULT", "CARER"]
+    },
+    {
+        "question": "What is safe to share online?",
+        "answers": ["EMOJIS", "DRAWINGS", "OPINIONS", "HOBBIES", "PROJECTS"]
+    },
+    {
+        "question": "What signs show a website is trustworthy?",
+        "answers": ["PADLOCK", "HTTPS", "CONTACT", "REVIEWS", "ABOUT"]
+    },
+    {
+        "question": "Which websites are good for school research?",
+        "answers": ["LIBRARY", "EDUCATIONAL", "ENCYCLOPEDIA", "SCHOOL", "GOVERNMENT"]
+    },
+    {
+        "question": "Which sources might not be reliable?",
+        "answers": ["BLOGS", "SOCIALMEDIA", "UNKNOWN", "RUMORS", "EDITABLE"]
+    },
+    {
+        "question": "What should you do before clicking a link?",
+        "answers": ["CHECK", "HOVER", "READ", "VERIFY", "SOURCE"]
+    },
+    {
+        "question": "What are signs of a fake website?",
+        "answers": ["SPELLING", "ADS", "NOSECURE", "POPUPS", "TOOGOOD"]
+    },
+    {
+        "question": "What should you use for strong passwords?",
+        "answers": ["NUMBERS", "LETTERS", "SYMBOLS", "UNIQUE", "LONG"]
+    },
+    {
+        "question": "What should you do if someone online asks for your details?",
+        "answers": ["IGNORE", "BLOCK", "REPORT", "TELL", "SECURITY"]
+    },
+    {
+        "question": "What should you do if you get a suspicious email?",
+        "answers": ["DELETE", "REPORT", "DONTCLICK", "AVOID", "SPAM"]
+    },
+    {
+        "question": "What can help protect your computer?",
+        "answers": ["ANTIVIRUS", "FIREWALL", "UPDATES", "PASSWORDS", "BACKUPS"]
+    },
+    {
+        "question": "What should you do if someone is being bullied online?",
+        "answers": ["SUPPORT", "TELL", "BLOCK", "REPORT", "HELP"]
+    },
+    {
+        "question": "How can you stay safe on public WiFi?",
+        "answers": ["DONTLOGIN", "VPN", "NOINFO", "HTTPS", "SECURE"]
+    },
+    {
+        "question": "What should you do before accepting online terms?",
+        "answers": ["READ", "ASK", "CHECK", "UNDERSTAND", "SAFE"]
+    }
+]

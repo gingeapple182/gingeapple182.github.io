@@ -1,0 +1,281 @@
+[
+    {
+        "type": "text",
+        "question": "Which of these is the best password?",
+        "options": [
+            "password123",
+            "ilovepizza",
+            "B!rDs4ReGr8",
+            "qwerty"
+        ],
+        "correct": 2,
+        "description": "A strong password should have a mix of letters, numbers, and symbols."
+    },
+    {
+        "type": "text",
+        "question": "What should you do if a website asks for your home address?",
+        "options": [
+            "Enter it if the website looks fun",
+            "Only share it with friends",
+            "Ask a parent or trusted adult before entering it",
+            "Post it on social media to check if it’s safe"
+        ],
+        "correct": 2,
+        "description": "Never share personal details online without checking with an adult."
+    },
+    {
+        "type": "text",
+        "question": "Why should you log out of your accounts after using a public computer?",
+        "options": [
+            "So no one else can use your account",
+            "Because the computer will explode",
+            "To make the computer work faster",
+            "Because the website asks you to"
+        ],
+        "correct": 0,
+        "description": "Logging out stops others from accessing your account without permission."
+    },
+    {
+        "type": "text",
+        "question": "What does the padlock symbol in the browser bar mean?",
+        "options": [
+            "The website is safe and protects your information",
+            "The website has fun games",
+            "The website is for kids",
+            "The website is asking for your password"
+        ],
+        "correct": 0,
+        "description": "A padlock means the website is using encryption to help keep information private."
+    },
+    {
+        "type": "text",
+        "question": "Which of these websites is safest to use?",
+        "options": [
+            "www.cool-games.biz",
+            "www.learnwithschool.edu",
+            "www.freemoney-now.com",
+            "www.videosforkids.net"
+        ],
+        "correct": 1,
+        "description": "Websites ending in .edu are for educational purposes and are often safer."
+    },
+    {
+        "type": "text",
+        "question": "A message says you’ve won a prize but need to enter your details to claim it. What should you do?",
+        "options": [
+            "Enter your details quickly before you lose the prize",
+            "Ask a parent or teacher before doing anything",
+            "Click the link and see what happens",
+            "Tell your friends about it"
+        ],
+        "correct": 1,
+        "description": "Many online messages about winning prizes are scams. Always check with an adult."
+    },
+    {
+        "type": "text",
+        "question": "Who should you share your password with?",
+        "options": [
+            "Your best friend",
+            "No one except a trusted adult",
+            "Everyone in your class",
+            "People you play games with online"
+        ],
+        "correct": 1,
+        "description": "Only share passwords with trusted adults to keep your accounts safe."
+    },
+    {
+        "type": "text",
+        "question": "What should you do if someone you don’t know messages you online?",
+        "options": [
+            "Reply and see if they’re nice",
+            "Ignore them and tell an adult",
+            "Send them a picture of yourself",
+            "Ask them for their real name"
+        ],
+        "correct": 1,
+        "description": "If a stranger messages you online, don’t reply—tell an adult."
+    },
+    {
+        "type": "text",
+        "question": "Why should you think before posting a picture online?",
+        "options": [
+            "Because you can’t delete it once it’s posted",
+            "Because it might use up internet data",
+            "Because pictures take up space on the internet",
+            "Because people might copy your photo"
+        ],
+        "correct": 0,
+        "description": "Anything you post online can stay there forever, even if you delete it."
+    },
+    {
+        "type": "text",
+        "question": "Which of these is an example of personal information?",
+        "options": [
+            "Your favorite food",
+            "Your birthday and home address",
+            "The name of your pet",
+            "Your favorite TV show"
+        ],
+        "correct": 1,
+        "description": "Personal information includes details like your birthday, address, and phone number."
+    },
+    {
+        "type": "text",
+        "question": "A friend asks for your login details to use your game account. What should you do?",
+        "options": [
+            "Give it to them since you trust them",
+            "Tell them to make their own account",
+            "Post it in a group chat so everyone can play",
+            "Write it down on a note and pass it to them"
+        ],
+        "correct": 1,
+        "description": "Never share your login details—even with friends. They should make their own account."
+    },
+    {
+        "type": "text",
+        "question": "What should you do if a game asks for your real name and phone number?",
+        "options": [
+            "Enter your details so you can play",
+            "Make up fake details",
+            "Ask a parent or teacher before entering anything",
+            "Tell your friends and ask what they did"
+        ],
+        "correct": 2,
+        "description": "Some games collect personal information. Always check with an adult first."
+    },
+    {
+        "type": "text",
+        "question": "Why should you check if a website’s address starts with ‘https’?",
+        "options": [
+            "It means the website is about technology",
+            "It means the website has extra security",
+            "It means the website has a password lock",
+            "It means the website has fun games"
+        ],
+        "correct": 1,
+        "description": "Websites with ‘https’ use encryption to help keep your information safe."
+    },
+    {
+        "type": "text",
+        "question": "You see a mean comment about a friend online. What should you do?",
+        "options": [
+            "Ignore it and move on",
+            "Reply with a mean comment back",
+            "Tell a teacher or a trusted adult",
+            "Join in and laugh"
+        ],
+        "correct": 2,
+        "description": "If you see something hurtful online, report it and tell an adult."
+    },
+    {
+        "type": "text",
+        "question": "What should you do if you see something online that makes you feel worried, scared, or upset?",
+        "options": [
+            "Tell a trusted adult, like a parent or teacher.",
+            "Keep it a secret and try to ignore it.",
+            "Click on lots of buttons to see if it goes away."
+        ],
+        "correct": 0,
+        "description": "If something online makes you feel uncomfortable, always talk to a trusted adult."
+    },
+    {
+        "type": "text",
+        "question": "How can you tell if a website or a video is safe for you to look at?",
+        "options": [
+            "It has bright colours and fun pictures, so it must be safe.",
+            "A trusted adult has checked it or it has a child-friendly symbol.",
+            "If it loads quickly, then it must be okay."
+        ],
+        "correct": 1,
+        "description": "Trusted adults or child-friendly symbols help show what’s safe for children."
+    },
+    {
+        "type": "text",
+        "question": "Why is it important to ask a grown-up before searching for something online?",
+        "options": [
+            "Some websites or videos might not be suitable for children.",
+            "Grown-ups don’t want kids to use the internet.",
+            "You might break the internet if you search for the wrong thing."
+        ],
+        "correct": 0,
+        "description": "Asking an adult helps keep you safe from unsuitable or harmful content."
+    },
+    {
+        "type": "text",
+        "question": "What kind of information should you never share when searching online?",
+        "options": [
+            "Your name, address, school, or phone number.",
+            "Your favourite colour and the name of your pet.",
+            "How many times you’ve been online today."
+        ],
+        "correct": 0,
+        "description": "Personal information like your name or address should always be kept private online."
+    },
+    {
+        "type": "text",
+        "question": "If a website or game asks for your name or address, what should you do?",
+        "options": [
+            "Type in a funny made-up name instead.",
+            "Ask a trusted adult before sharing any personal details.",
+            "Give them your real name because websites always keep secrets."
+        ],
+        "correct": 1,
+        "description": "Always ask an adult before giving any personal details online."
+    },
+    {
+        "type": "text",
+        "question": "Who are the trusted adults you can talk to if you see something online that doesn’t feel right?",
+        "options": [
+            "Your parent, teacher, or another trusted adult.",
+            "A stranger online who seems friendly.",
+            "No one – just keep it to yourself."
+        ],
+        "correct": 0,
+        "description": "Talk to a trusted adult if something online doesn't seem right."
+    },
+    {
+        "type": "text",
+        "question": "What should you do if a pop-up appears on a website asking you to click on something?",
+        "options": [
+            "Close it and tell an adult if you’re unsure.",
+            "Click on it quickly so it goes away.",
+            "Type in your name and email so you can get a prize."
+        ],
+        "correct": 0,
+        "description": "Pop-ups can be unsafe, so always close them and check with an adult."
+    },
+    {
+        "type": "text",
+        "question": "Why do some websites have 'child-friendly' symbols or safe search filters?",
+        "options": [
+            "They help make sure the content is suitable for children.",
+            "They are just there to make the website look pretty.",
+            "They let anyone, including strangers, send you messages."
+        ],
+        "correct": 0,
+        "description": "Child-friendly symbols help show that the content is safe for kids."
+    },
+    {
+        "type": "text",
+        "question": "What could happen if you click on a link or a video without checking first?",
+        "options": [
+            "It could take you to something unsafe or inappropriate.",
+            "It will always be something fun to watch.",
+            "Your computer will automatically delete all your games."
+        ],
+        "correct": 0,
+        "description": "Clicking random links can lead to unsafe or inappropriate content."
+    },
+    {
+        "type": "text",
+        "question": "How can you help a friend who has seen something online that made them feel uncomfortable?",
+        "options": [
+            "Tell them to talk to a trusted adult.",
+            "Ignore it and pretend it didn’t happen.",
+            "Keep watching or playing to see if it gets better."
+        ],
+        "correct": 0,
+        "description": "Encourage friends to speak to a trusted adult if they’re upset by something online."
+    }
+]
+      

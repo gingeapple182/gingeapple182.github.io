@@ -2,15 +2,15 @@
 const projects = [
     {
         name: "Gronk 2",
-        image: "kgsdf",
+        image: "assets/images/gronk_2_home.png",
         description: "A JavaScript-based adventure game.",
-        link: "https://github.com/gingeapple182/GRONK-2"
+        link: "https://gingeapple182.itch.io/gronk-2"
     },
     {
         name: "The Swiggles Game",
         image: "assets/images/swiggle_home.png",
         description: "An educational game focused on internet safety for children. Created in collaboration with other students and SWGfL",
-        link: "https://github.com/gingeapple182/Swiggle"
+        link: "assets/swiggle/index.html"
     },
     {
         name: "The Floor is Lava",
