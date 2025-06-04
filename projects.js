@@ -1,9 +1,9 @@
 // projects.js
 const projects = [
     {
-        name: "Gronk 2",
+        name: "GRONK 2",
         image: "assets/images/gronk_2_home.png",
-        description: "A JavaScript-based adventure game.",
+        description: "A 2D platformer game built in Godot as a personal project to test my skills.",
         link: "https://gingeapple182.itch.io/gronk-2"
     },
     {
@@ -14,14 +14,14 @@ const projects = [
     },
     {
         name: "The Floor is Lava",
-        image: "path/to/floor-is-lava-image.jpg",
-        description: "A 3D platformer-style game.",
+        image: "assets/images/tfil_home.png",
+        description: "A 3D platformer-style game built in Unity where the player must escape the facility before the lava rises too high.",
         link: "https://gingeapple182.itch.io/the-floor-is-lava"
     },
     {
         name:"GRONK",
         image:"path/to/gronk-image.jpg",
-        description: "My first year uni project to develop a basic single page game.",
+        description: "A top down basic adventure game used as my first year uni project to develop a basic single page game.",
         link: "https://github.com/gingeapple182/COMP1004"
     }
     // Add more projects here

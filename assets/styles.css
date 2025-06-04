@@ -110,6 +110,20 @@ h2 {
     background-color: #0056b3;
 }
 
+
+/* Style the contact icons */
+.contact-icon {
+    width: 36px; /* Set the size of the icons */
+    height: 36px;
+    margin-right: 8px; /* Adds space between the icon and the text */
+    vertical-align: middle; /* Vertically aligns the icon with the text */
+}
+
+/* Optional: Make the icons change color on hover */
+a:hover .contact-icon {
+    opacity: 0.8; /* Slightly dim the icon on hover */
+}
+
 ul {
     list-style-type: none;
     padding: 0;
