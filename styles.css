@@ -10,14 +10,14 @@ body {
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 /* Container to center content */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
 }
 
 /* Header */
@@ -115,6 +115,32 @@ header nav ul li a:hover {
 .project-card a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
 
 /* Footer */
 footer {

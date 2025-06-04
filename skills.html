@@ -14,43 +14,90 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
-            <a href="skills.html">CV</a>
+            <a href="skills.html">Skills</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <section id="cv">
-        <h2>My CV</h2>
-        <p>Click the link below to download my CV:</p>
-        <a href="path/to/your/cv.pdf" target="_blank">Download CV</a>
+        <h2>CV Overview</h2>
+        <p>
+            Below is a public-facing version of my CV, highlighting key skills and experience. <br>
+            If you’re interested in seeing my full professional CV, feel free to 
+            <a href="mailto:olivercolw@icloud.com">contact me via email</a>.
+        </p>
+            <a href="assets/gingeapple182_cv_public.pdf" target="_blank" class="button">Download Public CV (PDF)</a>
     </section>
 
     <section id="experience">
-        <h2>Work Experience</h2>
+        <h2>Experience</h2>
         <ul>
-            <li>Job 1 - Company Name (Year - Year)</li>
-            <li>Job 2 - Company Name (Year - Year)</li>
+            <li>University-led Game Development Project – Swiggle (2024)</li>
+            <li>Finance Supervisor – UK-based Business (2017–2022)</li>
+            <li>Retail Team Member – National Retail Chain (2022–2023)</li>
         </ul>
     </section>
 
     <section id="education">
         <h2>Education</h2>
         <ul>
-            <li>University Name - Degree (Year - Year)</li>
+            <li>Computer Science (Games Development) – UK University – Currently in final year of study</li>
+            <li>AAT Level 4 Diploma – Accounting Qualification</li>
         </ul>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Skill 1</li>
-            <li>Skill 2</li>
+            <li>Languages: GDScript, C#, JavaScript, HTML, CSS, SQL</li>
+            <li>Engines: Unity, Godot</li>
+            <li>Tools: GitHub, VSCode, Piskel, Trello</li>
+            <li>Soft Skills: Team leadership, project planning, problem-solving</li>
         </ul>
+    </section>
+
+    <section id="project-highlights">
+        <h2>Project Highlights</h2>
+        <div id="project-cards-container" class="cards"></div>
     </section>
 
     <footer>
         <p>&copy; 2025 Gingeapple182 - All Rights Reserved</p>
     </footer>
+
+    <script src="projects.js"></script>
+    <script>
+        // Filter and display all projects from the shared projects.js file
+        function displayCVProjects() {
+            const container = document.getElementById("project-cards-container");
+            container.innerHTML = "";
+
+            projects.forEach(project => {
+                const card = document.createElement("div");
+                card.className = "card";
+
+                const title = document.createElement("h3");
+                title.textContent = project.name;
+
+                const desc = document.createElement("p");
+                desc.textContent = project.description;
+
+                const link = document.createElement("a");
+                link.href = project.link;
+                link.textContent = "View Project";
+                link.className = "button";
+                link.target = "_blank";
+
+                card.appendChild(title);
+                card.appendChild(desc);
+                card.appendChild(link);
+
+                container.appendChild(card);
+            });
+        }
+
+        displayCVProjects();
+    </script>
 
 </body>
 </html>
