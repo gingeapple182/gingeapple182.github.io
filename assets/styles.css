@@ -1,0 +1,126 @@
+html, body {
+    height: 100%; /* Ensure body takes up the full height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    min-height: 100%; /* Ensures the body is always at least 100% height */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #9f9f9f;
+}
+
+main {
+    flex: 1; /* Ensures that the main content area takes up the remaining space */
+    padding-bottom: 50px; /* Adds space below the content to prevent overlap */
+}
+
+section {
+    padding: 2rem;
+    margin: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;  /* Ensures cards wrap to the next line when necessary */
+    gap: 1rem;        /* Adjusts spacing between cards */
+    justify-content: space-between; /* Aligns cards to the left */
+}
+
+.card {
+    width: 30%;   /* Each card takes up 30% of the container's width */
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 1rem;  /* Add margin between rows */
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 45%;  /* For medium screens, set each card to 45% width */
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        width: 30%;  /* For large screens, set each card to 30% width */
+    }
+}
+
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #333;
+}
+
+.card p {
+    color: #777;
+}
+
+.card .button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.card .button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: 2rem;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}

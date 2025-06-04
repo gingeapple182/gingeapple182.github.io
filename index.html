@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gingeapple182</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gingeapple182 - Game Developer</h1>
+        <p>Welcome to my portfolio showcasing my projects and skills</p>
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">CV</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a Computer Science student at the University of Plymouth, specializing in Game Development. I have a passion for creating interactive experiences and solving technical challenges.</p>
+    </section>
+
+    <!-- Project Cards Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I have worked on:</p>
+        <div class="cards" id="project-cards-container"></div> <!-- Dynamic cards will appear here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Oliver Cole - All Rights Reserved</p>
+    </footer>
+
+    <script src="projects.js"></script>
+    <script>
+        // Call the function to generate cards on the homepage
+        generateProjectCards();
+    </script>
+</body>
+</html>
