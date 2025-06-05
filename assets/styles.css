@@ -249,3 +249,27 @@ footer {
     color: var(--primary);
     transform: scale(1.08);
 }
+
+/* Universal link styles for good contrast */
+a {
+    color: var(--primary);
+    text-decoration: underline;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+a:visited {
+    color: var(--accent);
+}
+
+a:hover,
+a:focus {
+    color: var(--primary-dark);
+    text-decoration: underline;
+    outline: none;
+}
+
+a.button, .button a {
+    text-decoration: none;
+    color: var(--text-light);
+}
