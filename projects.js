@@ -8,8 +8,8 @@ const projects = [
         name: "GRONK 2",
         image: "assets/images/projects/gronk_2/gronk_2_home.png",
         banner: "assets/images/projects/gronk_2/gronk_2_banner.png",
-        description: "A 2D platformer game built in Godot as a personal project to test my skills.",
-        longDescription: "Gronk 2 is a 2D platformer game where players navigate through various levels, overcoming obstacles and enemies. The game features unique mechanics and a variety of environments to explore.",
+        description: "A 2D platformer built in Godot as a personal project, inspired by classic platformers like Mario.",
+        longDescription: "GRONK 2 is a personal project developed in Godot to expand my skills in coding and game design, drawing inspiration from classic 2D platformers such as Mario. The game features core platformer mechanics, including enemy encounters, coin collection, and basic player movement. I am solely responsible for all aspects of development, using a mix of asset packs and my own growing art skills. Future plans include adding more enemy types, dynamic player movement, and expanded interactions. The name 'GRONK 2' is a nod to my first-year university project, as I'm admittedly not great at naming games. Feedback from friends has been positive and motivates ongoing development.",
         playable: "https://gingeapple182.itch.io/gronk-2",
         links: [
             { label: "Itch.io", url: "https://gingeapple182.itch.io/gronk-2" },
@@ -24,12 +24,13 @@ const projects = [
     {
         name: "The Swiggles Game",
         image: "assets/images/projects/swiggle/swiggle_home.png",
-        banner: "",
-        description: "An educational game focused on internet safety for children. Created in collaboration with other students and SWGfL.",
-        longDescription: "The Swiggles Game teaches children about internet safety through fun and interactive gameplay. Developed in collaboration with SWGfL and fellow students.",
+        banner: "assets/images/projects/swiggle/swiggle_banner.png",
+        description: "A web game for children aged 5–9, teaching internet safety through interactive minigames. Developed as a university team project with SWGfL.",
+        longDescription: "The Swiggles Game is an educational web game designed to teach children aged 5–9 about internet safety, with a particular focus on safe searching. Developed as a year-long university team project in collaboration with SWGfL, the game features three engaging minigames: a wordsearch, a drag-and-drop sorting activity, and a quiz that allows children to review their answers. Built using HTML, CSS, JavaScript, and the P5.js library, I served as team lead and was responsible for the quiz minigame as well as client communication. Our client was extremely pleased with the outcome and expressed interest in using the game as a future learning tool for children.",
         playable: "assets/swiggle/index.html",
         links: [],
         screenshots: [
+            "assets/images/projects/swiggle/swiggle_home.png",
             "assets/images/projects/swiggle/swiggle_1.png",
             "assets/images/projects/swiggle/swiggle_2.png",
             "assets/images/projects/swiggle/swiggle_3.png",
@@ -40,9 +41,9 @@ const projects = [
     {
         name: "The Floor is Lava",
         image: "assets/images/projects/tfil/tfil_home.png",
-        banner: "",
-        description: "A 3D platformer-style game built in Unity where the player must escape the facility before the lava rises too high.",
-        longDescription: "Escape the rising lava in this fast-paced 3D platformer. Built in Unity, featuring challenging levels and dynamic hazards.",
+        banner: "assets/images/projects/tfil/tfil_banner.png",
+        description: "A 3D platformer built in Unity where players must escape rising lava by interacting with the environment.",
+        longDescription: "The Floor is Lava is a 3D platformer developed in Unity as a university assignment for my game development module. Players navigate a hazardous facility, using physics-based movement and interacting with the world—such as picking up objects, opening doors, and extending bridges—to escape rising lava that increases in speed. I was solely responsible for the project, combining Unity Asset Store resources with custom elements. The game received positive feedback, and with more time, I would have expanded its features further.",
         playable: "https://gingeapple182.itch.io/the-floor-is-lava",
         links: [
             { label: "Itch.io", url: "https://gingeapple182.itch.io/the-floor-is-lava" }
@@ -51,15 +52,19 @@ const projects = [
     },
     {
         name: "GRONK",
-        image: "path/to/gronk-image.jpg",
-        banner: "",
-        description: "A top down basic adventure game used as my first year uni project to develop a basic single page game.",
-        longDescription: "GRONK is a simple top-down adventure game created as a university project, focusing on core gameplay mechanics and single-page design.",
+        image: "assets/images/projects/gronk/gronk_home.png",
+        banner: "assets/images/projects/gronk/gronk_banner.png",
+        description: "A top-down adventure game built as a single-page web app for my first year university project.",
+        longDescription: "GRONK is a top-down adventure game developed as a single-page web application for my first year university project. Players control a character using only the keyboard to explore a map, interact with enemies, and experience encounter screens where choices can be made. The game was built entirely by myself using HTML, JavaScript, and the P5.js library, with no prior coding or game design experience. This project marked my introduction to programming and game development, and was well received by my lecturers.",
         playable: null,
         links: [
             { label: "GitHub", url: "https://github.com/gingeapple182/COMP1004" }
         ],
-        screenshots: []
+        screenshots: [
+            "assets/images/projects/gronk/gronk_1.png",
+            "assets/images/projects/gronk/gronk_2.png",
+            "assets/images/projects/gronk/gronk_3.png"
+        ]
     }
     // Add more projects here
 ];
