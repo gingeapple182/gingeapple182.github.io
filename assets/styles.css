@@ -131,6 +131,11 @@ h2 {
     max-height: 200px;
 }
 
+/* Hide card images only on the skills page */
+body.skills-page .card img {
+    display: none;
+}
+
 .card h3 {
     color: var(--primary);
     font-size: 1.3rem;

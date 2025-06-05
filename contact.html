@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Gingeapple182</title>
+    <!-- Meta tags for SEO and social sharing -->
     <meta name="description" content="Contact Gingeapple182 for collaborations, questions, or opportunities in game development.">
     <meta name="author" content="gingeapple182">
     <meta property="og:title" content="Contact | Gingeapple182">
@@ -15,9 +16,9 @@
 </head>
 <body>
 
+    <!-- Header with navigation -->
     <header>
         <h1>Gingeapple182 - Contact</h1>
-        <!-- Navigation Bar -->
         <nav>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
@@ -26,6 +27,7 @@
         </nav>
     </header>
 
+    <!-- Contact section with links to platforms and email -->
     <section id="contact">
         <h2>If you'd like to contact me, here's how:</h2>
         <ul>
@@ -52,27 +54,30 @@
         </ul>
     </section>
 
+    <!-- Light/Dark mode toggle button -->
     <button id="toggle-mode" aria-label="Toggle light/dark mode" style="position:absolute;top:1rem;right:1rem;">🌙</button>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Gingeapple182 - All Rights Reserved</p>
     </footer>
 
+    <!-- Light/Dark mode toggle script -->
     <script>
-const btn = document.getElementById('toggle-mode');
-btn.addEventListener('click', function() {
-    document.body.classList.toggle('light-mode');
-    // Change icon for user feedback
-    btn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
-    // Optional: Save preference
-    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
-});
-// On load, set theme from localStorage
-if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-mode');
-    btn.textContent = '🌞';
-}
-</script>
+        const btn = document.getElementById('toggle-mode');
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('light-mode');
+            // Change icon for user feedback
+            btn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+            // Save preference
+            localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        });
+        // On load, set theme from localStorage
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            btn.textContent = '🌞';
+        }
+    </script>
 
 </body>
 </html>

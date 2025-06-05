@@ -1,12 +1,16 @@
 // projects.js
+
+// ===============================
+// Project Data
+// ===============================
 const projects = [
     {
         name: "GRONK 2",
         image: "assets/images/projects/gronk_2/gronk_2_home.png",
-        banner: "",
+        banner: "assets/images/projects/gronk_2/gronk_2_banner.png",
         description: "A 2D platformer game built in Godot as a personal project to test my skills.",
         longDescription: "Gronk 2 is a 2D platformer game where players navigate through various levels, overcoming obstacles and enemies. The game features unique mechanics and a variety of environments to explore.",
-        playable: "https://gingeapple182.itch.io/gronk-2", // URL if playable externally, or null/undefined
+        playable: "https://gingeapple182.itch.io/gronk-2",
         links: [
             { label: "Itch.io", url: "https://gingeapple182.itch.io/gronk-2" },
             { label: "GitHub", url: "https://github.com/gingeapple182/GRONK-2" }
@@ -23,7 +27,7 @@ const projects = [
         banner: "",
         description: "An educational game focused on internet safety for children. Created in collaboration with other students and SWGfL.",
         longDescription: "The Swiggles Game teaches children about internet safety through fun and interactive gameplay. Developed in collaboration with SWGfL and fellow students.",
-        playable: "assets/swiggle/index.html", // Local playable
+        playable: "assets/swiggle/index.html",
         links: [],
         screenshots: [
             "assets/images/projects/swiggle/swiggle_1.png",
@@ -51,7 +55,7 @@ const projects = [
         banner: "",
         description: "A top down basic adventure game used as my first year uni project to develop a basic single page game.",
         longDescription: "GRONK is a simple top-down adventure game created as a university project, focusing on core gameplay mechanics and single-page design.",
-        playable: null, // Not directly playable
+        playable: null,
         links: [
             { label: "GitHub", url: "https://github.com/gingeapple182/COMP1004" }
         ],
@@ -59,11 +63,29 @@ const projects = [
     }
     // Add more projects here
 ];
+    // ===============================
+    // Project Data Template
+    // ===============================
+    // To add a new project, use the following fields:
+    // - name:            (string) Project title
+    // - image:           (string) Path to main card image (required)
+    // - banner:          (string) Path to banner image for modal (optional)
+    // - description:     (string) Short description for card
+    // - longDescription: (string) Detailed description for modal
+    // - playable:        (string|null) URL to playable version, or null if not playable
+    // - links:           (array) Extra links, each as { label, url }
+    // - screenshots:     (array) Screenshot image paths for modal gallery
+    // ===============================
 
+// ===============================
+// Card Generation Logic
+// ===============================
+// Dynamically creates project cards and inserts them into the container.
 function generateProjectCards() {
     const container = document.getElementById("project-cards-container");
     container.innerHTML = "";
 
+    // Show only a subset on the homepage, all on the projects page
     const isHomePage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
     const projectsToDisplay = isHomePage ? projects.slice(0, 2) : projects;
 
@@ -81,7 +103,7 @@ function generateProjectCards() {
         container.appendChild(card);
     });
 
-    // Add event listeners for "More Details" buttons
+    // Attach event listeners to "More Details" buttons to open the modal
     document.querySelectorAll('.more-details-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             const idx = this.getAttribute('data-project-index');
@@ -90,9 +112,12 @@ function generateProjectCards() {
     });
 }
 
-// Modal logic
+// ===============================
+// Modal Logic
+// ===============================
+// Builds and displays the project details modal.
 function openProjectModal(project) {
-    // Build links HTML
+    // Build extra links section if links exist
     const linksHtml = project.links && project.links.length
         ? `<div class="project-modal-links">
             ${project.links.map(link =>
@@ -101,7 +126,7 @@ function openProjectModal(project) {
         </div>`
         : "";
 
-    // Build screenshots HTML
+    // Build screenshots gallery if screenshots exist
     const screenshotsHtml = project.screenshots && project.screenshots.length
         ? `<div class="project-modal-screenshots">
             ${project.screenshots.map((src, i) =>
@@ -110,14 +135,15 @@ function openProjectModal(project) {
         </div>`
         : "";
 
-    // View Project button (only if playable)
+    // Show "View Project" button only if playable
     const viewProjectBtn = project.playable
         ? `<a href="${project.playable}" class="project-modal-view" target="_blank" rel="noopener">View Project</a>`
         : "";
 
+    // Use banner image if available, otherwise fallback to main image
     const bannerImg = project.banner ? project.banner : project.image;
 
-    // Modal HTML
+    // Modal HTML structure
     const modalHtml = `
         <div class="project-modal-overlay" tabindex="-1">
             <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -132,7 +158,7 @@ function openProjectModal(project) {
         </div>
     `;
 
-    // Inject modal into the root
+    // Inject modal into the root element (create if missing)
     let modalRoot = document.getElementById('project-modal-root');
     if (!modalRoot) {
         modalRoot = document.createElement('div');
@@ -141,18 +167,17 @@ function openProjectModal(project) {
     }
     modalRoot.innerHTML = modalHtml;
 
-    // Prevent background scroll
+    // Prevent background scroll while modal is open
     document.body.style.overflow = "hidden";
 
-    // Focus for accessibility
+    // Focus overlay for accessibility
     const overlay = modalRoot.querySelector('.project-modal-overlay');
     overlay.focus();
 
-    // Close modal logic
+    // Close modal and restore scroll
     function closeModal() {
         modalRoot.innerHTML = "";
         document.removeEventListener('keydown', escListener);
-        // Re-enable background scroll
         document.body.style.overflow = "";
     }
     // ESC key closes modal
@@ -169,5 +194,8 @@ function openProjectModal(project) {
     };
 }
 
-// Call this function on page load as before
+// ===============================
+// Initialisation
+// ===============================
+// Call this function on page load to render cards
 // generateProjectCards();

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Gingeapple182</title>
+    <!-- Meta tags for SEO and social sharing -->
     <meta name="description" content="Browse all game development projects by Gingeapple182, including Unity, Godot, and web games.">
     <meta name="author" content="gingeapple182">
     <meta property="og:title" content="Projects | Gingeapple182">
@@ -15,9 +16,9 @@
 </head>
 <body>
 
+    <!-- Header with navigation -->
     <header>
         <h1>Gingeapple182 - Projects</h1>
-        <!-- Navigation Bar -->
         <nav>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
@@ -26,36 +27,39 @@
         </nav>
     </header>
 
+    <!-- Projects section: dynamically populated cards -->
     <section id="projects">
         <h2>All Projects</h2>
-        <div class="cards" id="project-cards-container"></div> <!-- Dynamic cards will appear here -->
+        <div class="cards" id="project-cards-container"></div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Gingeapple182 - All Rights Reserved</p>
     </footer>
 
+    <!-- Light/Dark mode toggle button -->
     <button id="toggle-mode" aria-label="Toggle light/dark mode" style="position:absolute;top:1rem;right:1rem;">🌙</button>
 
+    <!-- Scripts -->
     <script src="projects.js"></script>
     <script>
-        // Call the function to generate all project cards (including Gronk2, Swiggle, etc.)
+        // Generate all project cards on page load
         generateProjectCards();
     </script>
     <script>
-const btn = document.getElementById('toggle-mode');
-btn.addEventListener('click', function() {
-    document.body.classList.toggle('light-mode');
-    // Change icon for user feedback
-    btn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
-    // Optional: Save preference
-    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
-});
-// On load, set theme from localStorage
-if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-mode');
-    btn.textContent = '🌞';
-}
-</script>
+        // Light/Dark mode toggle logic
+        const btn = document.getElementById('toggle-mode');
+        btn.addEventListener('click', function() {
+            document.body.classList.toggle('light-mode');
+            btn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+            localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        });
+        // On load, set theme from localStorage
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            btn.textContent = '🌞';
+        }
+    </script>
 </body>
 </html>
