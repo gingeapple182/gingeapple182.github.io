@@ -27,7 +27,7 @@
     --card-bg: #fff;
     --card-shadow: 0 6px 24px rgba(255, 132, 0, 0.08), 0 1.5px 6px rgba(255, 209, 128, 0.04);
     --card-text: #222;
-    --heading: #ffb347;
+    --heading: #fc9b13;
 }
 
 /* =========================
@@ -272,4 +272,142 @@ a:focus {
 a.button, .button a {
     text-decoration: none;
     color: var(--text-light);
+}
+
+/* Modal Overlay */
+.project-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s;
+}
+
+/* Modal Box */
+.project-modal {
+    background: var(--card-bg);
+    color: var(--card-text);
+    border-radius: 16px;
+    max-width: 900px; /* Increased from 600px */
+    width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    position: relative;
+    animation: popIn 0.2s;
+}
+
+/* Modal Close Button */
+.project-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.project-modal-close:hover {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+/* Modal Banner Image */
+.project-modal-banner {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    max-height: 220px;
+}
+
+/* Modal Screenshots Gallery */
+.project-modal-screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.project-modal-screenshot {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    transition: border 0.2s;
+    background: #fff;
+}
+.project-modal-screenshot:hover {
+    border: 2px solid var(--primary);
+}
+
+/* Modal Links */
+.project-modal-links {
+    margin: 1rem 0;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.project-modal-link {
+    background: var(--primary);
+    color: var(--text-light);
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.project-modal-link:hover {
+    background: var(--primary-dark);
+    color: var(--accent);
+}
+
+/* Modal View Project Button */
+.project-modal-view {
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0 0 0;
+    background: linear-gradient(90deg, var(--primary) 60%, var(--primary-dark) 100%);
+    color: var(--text-light);
+    border: none;
+    border-radius: 16px 16px 16px 16px; /* Match card button */
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    margin: 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+    letter-spacing: 0.5px;
+    font-family: inherit; /* Ensure it matches the rest of the site */
+}
+.project-modal-view:hover {
+    background: linear-gradient(90deg, var(--primary-dark) 60%, #00515a 100%);
+    color: var(--accent);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
