@@ -75,11 +75,25 @@ header nav ul li a:hover {
   margin-bottom: 20px;
 }
 
-.project-grid {
+.cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  width: 100%;
 }
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .project-card {
   background-color: #fff;
@@ -118,7 +132,7 @@ header nav ul li a:hover {
 
 @media (max-width: 768px) {
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
 
