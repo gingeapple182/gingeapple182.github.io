@@ -28,10 +28,27 @@
         <p>&copy; 2025 Gingeapple182 - All Rights Reserved</p>
     </footer>
 
+    <button id="toggle-mode" aria-label="Toggle light/dark mode" style="position:absolute;top:1rem;right:1rem;">🌙</button>
+
     <script src="projects.js"></script>
     <script>
         // Call the function to generate all project cards (including Gronk2, Swiggle, etc.)
         generateProjectCards();
     </script>
+    <script>
+const btn = document.getElementById('toggle-mode');
+btn.addEventListener('click', function() {
+    document.body.classList.toggle('light-mode');
+    // Change icon for user feedback
+    btn.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+    // Optional: Save preference
+    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+});
+// On load, set theme from localStorage
+if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    btn.textContent = '🌞';
+}
+</script>
 </body>
 </html>
