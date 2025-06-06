@@ -28,7 +28,9 @@ const projects = [
         description: "A web game for children aged 5–9, teaching internet safety through interactive minigames. Developed as a university team project with SWGfL.",
         longDescription: "The Swiggles Game is an educational web game designed to teach children aged 5–9 about internet safety, with a particular focus on safe searching. Developed as a year-long university team project in collaboration with SWGfL, the game features three engaging minigames: a wordsearch, a drag-and-drop sorting activity, and a quiz that allows children to review their answers. Built using HTML, CSS, JavaScript, and the P5.js library, I served as team lead and was responsible for the quiz minigame as well as client communication. Our client was extremely pleased with the outcome and expressed interest in using the game as a future learning tool for children.",
         playable: "assets/swiggle/index.html",
-        links: [],
+        links: [
+            { label: "SWGfL (Client)", url: "https://swiggle.org.uk" }
+        ],
         screenshots: [
             "assets/images/projects/swiggle/swiggle_home.png",
             "assets/images/projects/swiggle/swiggle_1.png",
@@ -122,11 +124,16 @@ function generateProjectCards() {
 // ===============================
 // Builds and displays the project details modal.
 function openProjectModal(project) {
+    // Helper to check if a link is external
+    function isExternal(url) {
+        return /^https?:\/\//i.test(url);
+    }
+
     // Build extra links section if links exist
     const linksHtml = project.links && project.links.length
         ? `<div class="project-modal-links">
             ${project.links.map(link =>
-                `<a href="${link.url}" class="project-modal-link" target="_blank" rel="noopener">${link.label}</a>`
+                `<a href="${link.url}" class="project-modal-link"${isExternal(link.url) ? ' target="_blank" rel="noopener"' : ''}>${link.label}</a>`
             ).join('')}
         </div>`
         : "";
@@ -142,7 +149,7 @@ function openProjectModal(project) {
 
     // Show "View Project" button only if playable
     const viewProjectBtn = project.playable
-        ? `<a href="${project.playable}" class="project-modal-view" target="_blank" rel="noopener">View Project</a>`
+        ? `<a href="${project.playable}" class="project-modal-view"${isExternal(project.playable) ? ' target="_blank" rel="noopener"' : ''}>View Project</a>`
         : "";
 
     // Use banner image if available, otherwise fallback to main image

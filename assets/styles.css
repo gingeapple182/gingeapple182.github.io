@@ -2,9 +2,9 @@
    Color Variables & Theme
    ========================= */
 :root {
-    --primary: #ff8400;         /* Orange */
-    --primary-dark: #ff6700;    /* Deeper orange */
-    --accent: #ffd180;          /* Soft gold/orange accent */
+    --primary: #ff8400;
+    --primary-dark: #ff6700;
+    --accent: #ffd180;
     --background: #222831;
     --header-footer: #222831;
     --text-main: #fff;
@@ -12,7 +12,7 @@
     --card-bg: #2d353e;
     --card-shadow: 0 6px 24px rgba(255, 132, 0, 0.08), 0 1.5px 6px rgba(255, 209, 128, 0.04);
     --card-text: #fff;
-    --heading: #ffb347;         /* Lighter orange for headings */
+    --heading: #ffb347;
 }
 
 /* Light Mode Theme */
@@ -97,14 +97,15 @@ h2 {
    Card Styles
    ========================= */
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
 }
 
 .card {
-    width: 30%;
+    max-width: 500px;
+    width: 100%;
     background: var(--card-bg);
     border-radius: 16px;
     box-shadow: var(--card-shadow);
@@ -124,11 +125,10 @@ h2 {
 
 .card img {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    height: 200px;
     object-fit: cover;
     border-radius: 16px 16px 0 0;
-    max-height: 200px;
+    background: #222;
 }
 
 /* Hide card images only on the skills page */
@@ -149,7 +149,9 @@ body.skills-page .card img {
     flex: 1;
 }
 
-.card .button {
+/* Shared button styles for cards and modal */
+.card .button,
+.project-modal-view {
     background: linear-gradient(90deg, var(--primary) 60%, var(--primary-dark) 100%);
     color: var(--text-light);
     border: none;
@@ -166,37 +168,36 @@ body.skills-page .card img {
     box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
     letter-spacing: 0.5px;
     display: block;
+    font-family: inherit;
 }
 
-.card .button:hover {
+.card .button:hover,
+.project-modal-view:hover {
     background: linear-gradient(90deg, var(--primary-dark) 60%, #00515a 100%);
     color: var(--accent);
+}
+
+@media (min-width: 1200px) {
+    .card {
+        max-width: 500px;
+    }
+    .card img {
+        object-fit: contain;
+    }
 }
 
 /* =========================
    Responsive Layout
    ========================= */
-@media (min-width: 768px) {
-    .card {
-        width: 45%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .card {
-        width: 30%;
-    }
-}
-
 @media (max-width: 768px) {
     .cards {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 1rem;
-        align-items: center;
+        justify-items: center;
     }
     .card {
         width: 100%;
-        max-width: 500px;
+        max-width: 95vw;
     }
 }
 
@@ -229,8 +230,11 @@ footer {
     flex-shrink: 0;
 }
 
+/* =========================
+   Toggle Button Placement
+   ========================= */
 #toggle-mode {
-    position: fixed;
+    position: fixed; /* Always fixed to viewport */
     top: 1.5rem;
     right: 1.5rem;
     z-index: 1000;
@@ -253,6 +257,21 @@ footer {
     background: var(--accent);
     color: var(--primary);
     transform: scale(1.08);
+}
+
+/* =========================
+   Mobile: Toggle Button Placement
+   ========================= */
+@media (max-width: 600px) {
+    #toggle-mode {
+        top: auto;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        left: auto;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
 }
 
 /* Universal link styles for good contrast */
@@ -296,7 +315,7 @@ a.button, .button a {
     background: var(--card-bg);
     color: var(--card-text);
     border-radius: 16px;
-    max-width: 900px; /* Increased from 600px */
+    max-width: 900px;
     width: 95vw;
     max-height: 90vh;
     overflow-y: auto;
@@ -332,7 +351,7 @@ a.button, .button a {
 /* Modal Banner Image */
 .project-modal-banner {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 16px;
     object-fit: cover;
     margin-bottom: 1rem;
     max-height: 220px;
@@ -348,7 +367,7 @@ a.button, .button a {
 .project-modal-screenshot {
     width: 100%;
     height: auto;
-    max-height: 200px; /* Adjust as needed */
+    max-height: 200px;
     object-fit: cover;
     border-radius: 8px;
     border: 2px solid var(--accent);
@@ -370,7 +389,7 @@ a.button, .button a {
 .project-modal-link {
     background: var(--primary);
     color: var(--text-light);
-    border-radius: 6px;
+    border-radius: 8px 8px 8px 0px;
     padding: 0.4rem 1rem;
     text-decoration: none;
     font-weight: bold;
@@ -378,32 +397,6 @@ a.button, .button a {
 }
 .project-modal-link:hover {
     background: var(--primary-dark);
-    color: var(--accent);
-}
-
-/* Modal View Project Button */
-.project-modal-view {
-    display: block;
-    width: 100%;
-    margin: 1.5rem 0 0 0;
-    background: linear-gradient(90deg, var(--primary) 60%, var(--primary-dark) 100%);
-    color: var(--text-light);
-    border: none;
-    border-radius: 16px 16px 16px 16px; /* Match card button */
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 1rem 0;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-    margin: 0;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
-    letter-spacing: 0.5px;
-    font-family: inherit; /* Ensure it matches the rest of the site */
-}
-.project-modal-view:hover {
-    background: linear-gradient(90deg, var(--primary-dark) 60%, #00515a 100%);
     color: var(--accent);
 }
 
