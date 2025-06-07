@@ -400,6 +400,55 @@ a.button, .button a {
     color: var(--accent);
 }
 
+/* Project modal links and tech icons row */
+.project-modal-links-icons-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1rem 0 0.5rem 0;
+}
+.project-modal-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.project-modal-link {
+    background: var(--primary);
+    color: var(--text-light);
+    border-radius: 8px 8px 8px 0px;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.project-modal-link:hover {
+    background: var(--primary-dark);
+    color: var(--accent);
+}
+.project-modal-tech-inline {
+    display: flex;
+    gap: 0.5rem;
+}
+.project-tech-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    object-fit: contain;
+}
+.project-modal-tech-inline .project-tech-icon {
+    margin-top: 18px;
+}
+
+/* Skill icons */
+.skill-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }

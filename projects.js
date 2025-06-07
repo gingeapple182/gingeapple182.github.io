@@ -19,7 +19,8 @@ const projects = [
             "assets/images/projects/gronk_2/gronk_2_1.png",
             "assets/images/projects/gronk_2/gronk_2_2.png",
             "assets/images/projects/gronk_2/gronk_2_3.png"
-        ]
+        ],
+        tech: ["Godot", "GitHub"]
     },
     {
         name: "The Swiggles Game",
@@ -38,7 +39,8 @@ const projects = [
             "assets/images/projects/swiggle/swiggle_3.png",
             "assets/images/projects/swiggle/swiggle_4.png",
             "assets/images/projects/swiggle/swiggle_5.png",
-        ]
+        ],
+        tech: ["HTML5", "CSS3", "JavaScript", "p5-JS", "GitHub"]
     },
     {
         name: "The Floor is Lava",
@@ -50,7 +52,8 @@ const projects = [
         links: [
             { label: "Itch.io", url: "https://gingeapple182.itch.io/the-floor-is-lava" }
         ],
-        screenshots: []
+        screenshots: [],
+        tech: ["Unity", "CSharp", "GitHub"]
     },
     {
         name: "GRONK",
@@ -66,23 +69,25 @@ const projects = [
             "assets/images/projects/gronk/gronk_1.png",
             "assets/images/projects/gronk/gronk_2.png",
             "assets/images/projects/gronk/gronk_3.png"
-        ]
+        ],
+        tech: ["HTML5", "JavaScript", "p5-JS", "GitHub"]
     }
     // Add more projects here
 ];
-    // ===============================
-    // Project Data Template
-    // ===============================
-    // To add a new project, use the following fields:
-    // - name:            (string) Project title
-    // - image:           (string) Path to main card image (required)
-    // - banner:          (string) Path to banner image for modal (optional)
-    // - description:     (string) Short description for card
-    // - longDescription: (string) Detailed description for modal
-    // - playable:        (string|null) URL to playable version, or null if not playable
-    // - links:           (array) Extra links, each as { label, url }
-    // - screenshots:     (array) Screenshot image paths for modal gallery
-    // ===============================
+// ===============================
+// Project Data Template
+// ===============================
+// To add a new project, use the following fields:
+// - name:            (string) Project title
+// - image:           (string) Path to main card image (required)
+// - banner:          (string) Path to banner image for modal (optional)
+// - description:     (string) Short description for card
+// - longDescription: (string) Detailed description for modal
+// - playable:        (string|null) URL to playable version, or null if not playable
+// - links:           (array) Extra links, each as { label, url }
+// - screenshots:     (array) Screenshot image paths for modal gallery
+// - tech:            (array) Technologies used, for display in modal
+// ===============================
 
 // ===============================
 // Card Generation Logic
@@ -129,14 +134,25 @@ function openProjectModal(project) {
         return /^https?:\/\//i.test(url);
     }
 
-    // Build extra links section if links exist
-    const linksHtml = project.links && project.links.length
-        ? `<div class="project-modal-links">
-            ${project.links.map(link =>
+    // Build links and tech icons row (links left, icons right)
+    const linksAndIconsRow = `
+      <div class="project-modal-links-icons-row">
+        <div class="project-modal-links">
+          ${project.links && project.links.length
+            ? project.links.map(link =>
                 `<a href="${link.url}" class="project-modal-link"${isExternal(link.url) ? ' target="_blank" rel="noopener"' : ''}>${link.label}</a>`
-            ).join('')}
-        </div>`
-        : "";
+              ).join('')
+            : ''}
+        </div>
+        <div class="project-modal-tech-inline">
+          ${project.tech && project.tech.length
+            ? project.tech.map(tech =>
+                `<img src="assets/images/icons/${tech}.png" alt="${tech} icon" title="${tech}" class="project-tech-icon">`
+              ).join('')
+            : ''}
+        </div>
+      </div>
+    `;
 
     // Build screenshots gallery if screenshots exist
     const screenshotsHtml = project.screenshots && project.screenshots.length
@@ -163,7 +179,7 @@ function openProjectModal(project) {
                 <img class="project-modal-banner" src="${bannerImg}" alt="${project.name} banner">
                 <h2 id="modal-title">${project.name}</h2>
                 <p class="project-modal-description">${project.longDescription}</p>
-                ${linksHtml}
+                ${linksAndIconsRow}
                 ${viewProjectBtn}
                 ${screenshotsHtml}
             </div>
