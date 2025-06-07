@@ -406,7 +406,6 @@ a.button, .button a {
     justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
-    margin: 1rem 0 0.5rem 0;
 }
 .project-modal-links {
     display: flex;
@@ -417,7 +416,7 @@ a.button, .button a {
     background: var(--primary);
     color: var(--text-light);
     border-radius: 8px 8px 8px 0px;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.5rem;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.2s;
@@ -485,4 +484,74 @@ a.button, .button a {
 .footer-copy {
     font-size: 1rem;
     opacity: 0.7;
+}
+
+/* Lightbox overlay for modal screenshots */
+.lightbox-overlay {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(30, 32, 36, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.lightbox-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+.lightbox-img {
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.4);
+    background: #222;
+}
+.lightbox-close {
+    position: absolute;
+    top: -2.5rem;
+    right: 0;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.2s;
+}
+.lightbox-close:hover {
+    color: #ff8400;
+}
+.lightbox-arrow {
+    background: rgba(44,50,56,0.85);
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: background 0.2s, color 0.2s;
+}
+.lightbox-prev { left: -3.5rem; }
+.lightbox-next { right: -3.5rem; }
+.lightbox-arrow:hover {
+    background: #ff8400;
+    color: #222;
 }

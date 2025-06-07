@@ -195,6 +195,82 @@ function openProjectModal(project) {
     }
     modalRoot.innerHTML = modalHtml;
 
+    // --- Lightbox logic for screenshots ---
+    const screenshots = project.screenshots || [];
+    const screenshotImgs = modalRoot.querySelectorAll('.project-modal-screenshot');
+    if (screenshots.length > 0) {
+        screenshotImgs.forEach((img, idx) => {
+            img.style.cursor = "pointer";
+            img.addEventListener('click', () => openLightbox(idx));
+        });
+    }
+
+    function openLightbox(startIdx) {
+        let currentIdx = startIdx;
+
+        // Build lightbox HTML
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox-overlay';
+        lightbox.tabIndex = -1;
+        lightbox.innerHTML = `
+            <div class="lightbox-content">
+                <button class="lightbox-close" aria-label="Close">&times;</button>
+                <button class="lightbox-arrow lightbox-prev" aria-label="Previous">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <path d="M18 22L10 14L18 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <img src="${screenshots[currentIdx]}" class="lightbox-img" alt="Screenshot ${currentIdx + 1}">
+                <button class="lightbox-arrow lightbox-next" aria-label="Next">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                    <path d="M10 6L18 14L10 22" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+        lightbox.focus();
+
+        // Show/hide arrows
+        function updateArrows() {
+            lightbox.querySelector('.lightbox-prev').style.display = currentIdx === 0 ? 'none' : '';
+            lightbox.querySelector('.lightbox-next').style.display = currentIdx === screenshots.length - 1 ? 'none' : '';
+        }
+        updateArrows();
+
+        // Update image
+        function showImage(idx) {
+            currentIdx = idx;
+            lightbox.querySelector('.lightbox-img').src = screenshots[currentIdx];
+            lightbox.querySelector('.lightbox-img').alt = `Screenshot ${currentIdx + 1}`;
+            updateArrows();
+        }
+
+        // Arrow events
+        lightbox.querySelector('.lightbox-prev').onclick = e => {
+            e.stopPropagation();
+            if (currentIdx > 0) showImage(currentIdx - 1);
+        };
+        lightbox.querySelector('.lightbox-next').onclick = e => {
+            e.stopPropagation();
+            if (currentIdx < screenshots.length - 1) showImage(currentIdx + 1);
+        };
+
+        // Close logic
+        function closeLightbox() {
+            document.body.removeChild(lightbox);
+            document.removeEventListener('keydown', keyHandler);
+        }
+        lightbox.querySelector('.lightbox-close').onclick = closeLightbox;
+        lightbox.onclick = e => { if (e.target === lightbox) closeLightbox(); };
+        function keyHandler(e) {
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowLeft" && currentIdx > 0) showImage(currentIdx - 1);
+            if (e.key === "ArrowRight" && currentIdx < screenshots.length - 1) showImage(currentIdx + 1);
+        }
+        document.addEventListener('keydown', keyHandler);
+    }
+
     // Prevent background scroll while modal is open
     document.body.style.overflow = "hidden";
 
