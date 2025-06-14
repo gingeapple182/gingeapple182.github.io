@@ -112,7 +112,17 @@ function generateProjectCards() {
 
     // Show only a subset on the homepage, all on the projects page
     const isHomePage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
-    const projectsToDisplay = isHomePage ? projects.slice(0, 2) : projects;
+    let projectsToDisplay;
+    if (isHomePage) {
+        // Always show first two, plus Blender project (if not already in top 2)
+        const blenderIdx = projects.findIndex(p => p.name === "Blender Projects");
+        projectsToDisplay = projects.slice(0, 2);
+        if (blenderIdx > 1) {
+            projectsToDisplay.push(projects[blenderIdx]);
+        }
+    } else {
+        projectsToDisplay = projects;
+    }
 
     projectsToDisplay.forEach((project, idx) => {
         const card = document.createElement("div");
