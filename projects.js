@@ -84,7 +84,35 @@ const projects = [
         screenshots: [
         ],
         tech: ["Blender"]
-    }
+    },
+    {
+        name: "PICO-8 Projects",
+        image: "assets/images/projects/pico_8/pico8_home.png", // placeholder or logo
+        banner: "assets/images/projects/pico_8/pico8_banner.png",
+        description: "A collection of small, retro-inspired games made with PICO-8. All games are playable right here!",
+        longDescription: "This card features my growing collection of PICO-8 games. Each project is designed to be quick to pick up and play, with classic retro vibes. You can play each game directly in your browser below.",
+        playable: null,
+        links: [
+            { label: "PICO-8", url: "https://www.lexaloffle.com/pico-8.php" }
+        ],
+        screenshots: [
+            // Optionally, add a collage or main screenshot here
+        ],
+        tech: ["Pico8", "Lua"],
+        games: [
+            // Example game entry
+            {
+                title: "Mini Platformer",
+                description: "A tiny platformer with jump and collect mechanics.",
+                embed: "assets/pico8/mini_platformer.html", // exported HTML from PICO-8
+                screenshots: [
+                    "assets/images/projects/pico8/mini_platformer_1.png"
+                ]
+            },
+            // Add more games here
+        ]
+    },
+    
     // Add more projects here
 ];
 // ===============================
