@@ -102,11 +102,11 @@ const projects = [
         games: [
             // Example game entry
             {
-                title: "Mini Platformer",
-                description: "A tiny platformer with jump and collect mechanics.",
-                embed: "assets/pico8/mini_platformer.html", // exported HTML from PICO-8
+                title: "Gronk",
+                description: "A Pico-8 rebuild of my first year university project, GRONK. Explore a top-down adventure world with keyboard controls. Best played on PC or Mac.",
+                embed: "assets/pico_8/gronk.html", // exported HTML from PICO-8
                 screenshots: [
-                    "assets/images/projects/pico8/mini_platformer_1.png"
+                    "assets/images/projects/gronk.p8.png"
                 ]
             },
             // Add more games here
@@ -222,6 +222,21 @@ function openProjectModal(project) {
     // Use banner image if available, otherwise fallback to main image
     const bannerImg = project.banner ? project.banner : project.image;
 
+    let pico8GamesHtml = "";
+    if (project.name === "PICO-8 Projects" && Array.isArray(project.games) && project.games.length) {
+        pico8GamesHtml = `
+          <div class="pico8-games-list">
+            ${project.games.map(game => `
+              <div class="pico8-game-entry">
+                <h4>${game.title}</h4>
+                <p>${game.description}</p>
+                <iframe src="${game.embed}" width="512" height="512" frameborder="0" allowfullscreen style="background:#222;border-radius:12px;margin-bottom:1.5rem;"></iframe>
+              </div>
+            `).join('')}
+          </div>
+        `;
+    }
+
     // Modal HTML structure
     const modalHtml = `
         <div class="project-modal-overlay" tabindex="-1">
@@ -232,6 +247,7 @@ function openProjectModal(project) {
                 <p class="project-modal-description">${project.longDescription}</p>
                 ${linksAndIconsRow}
                 ${viewProjectBtn}
+                ${pico8GamesHtml}
                 ${screenshotsHtml}
             </div>
         </div>

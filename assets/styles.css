@@ -555,3 +555,24 @@ a.button, .button a {
     background: #ff8400;
     color: #222;
 }
+
+/* Pico-8 Games List Styles */
+.pico8-games-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.pico8-game-entry {
+    background: #23272e;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.pico8-game-entry h4 {
+    margin-bottom: 0.5rem;
+}
+.pico8-game-entry iframe {
+    margin-top: 1rem;
+}
