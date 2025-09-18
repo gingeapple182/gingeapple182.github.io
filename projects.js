@@ -72,7 +72,7 @@ const projects = [
         ],
         tech: ["HTML5", "JavaScript", "p5-JS", "GitHub"]
     },
-    {
+    /*{
         name: "Blender Projects",
         image: "assets/images/projects/blender/blender_home.png",
         banner: "assets/images/projects/blender/blender_banner.png",
@@ -84,7 +84,7 @@ const projects = [
         screenshots: [
         ],
         tech: ["Blender"]
-    },
+    },*/
     {
         name: "PICO-8 Projects",
         image: "assets/images/projects/pico_8/pico8_home.png", // placeholder or logo
@@ -102,8 +102,8 @@ const projects = [
         games: [
             // Example game entry
             {
-                title: "Gronk",
-                description: "A Pico-8 rebuild of my first year university project, GRONK. Explore a top-down adventure world with keyboard controls. Best played on PC or Mac.",
+                title: "Rugnar",
+                description: `A Pico-8 rebuild of my first year university project, GRONK. This is a work-in-progress and currently unfinished. The inspiration for this game comes from my original vision for GRONK, which itself was inspired by the Grognak the Barbarian Pip-Boy minigame from Fallout 4, as well as classic games such as The Bard's Tale, Ultima, and Wasteland. Explore a top-down adventure world with keyboard controls. Best played on PC or Mac.`,
                 embed: "assets/pico_8/gronk.html", // exported HTML from PICO-8
                 screenshots: [
                     "assets/images/projects/gronk.p8.png"
