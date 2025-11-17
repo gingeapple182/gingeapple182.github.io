@@ -5,22 +5,35 @@
 // ===============================
 const projects = [
     {
-        name: "GRONK 2",
-        image: "assets/images/projects/gronk_2/gronk_2_home.png",
-        banner: "assets/images/projects/gronk_2/gronk_2_banner.png",
-        description: "A 2D platformer built in Godot as a personal project, inspired by classic platformers like Mario.",
-        longDescription: "GRONK 2 is a personal project developed in Godot to expand my skills in coding and game design, drawing inspiration from classic 2D platformers such as Mario. The game features core platformer mechanics, including enemy encounters, coin collection, and basic player movement. I am solely responsible for all aspects of development, using a mix of asset packs and my own growing art skills. Future plans include adding more enemy types, dynamic player movement, and expanded interactions. The name 'GRONK 2' is a nod to my first-year university project, as I'm admittedly not great at naming games. Feedback from friends has been positive and motivates ongoing development.",
-        playable: "https://gingeapple182.itch.io/gronk-2",
+        name: "COMP3000 Final Year Project",
+        image: "assets/images/projects/comp3000/comp3000_home.png",
+        banner: "assets/images/projects/comp3000/comp3000_banner.png",
+        description: "3D puzzle game where you use basic logic gates to repair a hilariously broken office.",
+        longDescription: "COMP3000 Final Year Project is a 3D puzzle game built in Godot. Play as a new tech hire in an incompetently set-up office where systems are broken or behaving oddly. Solve environmental puzzles by wiring and applying foundational logic gates (AND, NOT, XOR) to restore devices, servers and machinery. Designed to teach and apply computing logic through interactive level design. Currently in active development.",
+        playable: null,
         links: [
-            { label: "Itch.io", url: "https://gingeapple182.itch.io/gronk-2" },
-            { label: "GitHub", url: "https://github.com/gingeapple182/GRONK-2" }
+            { label: "Godot", url: "https://godotengine.org" }
         ],
         screenshots: [
-            "assets/images/projects/gronk_2/gronk_2_1.png",
-            "assets/images/projects/gronk_2/gronk_2_2.png",
-            "assets/images/projects/gronk_2/gronk_2_3.png"
+            // add screenshots when available
         ],
-        tech: ["Godot", "GitHub"]
+        tech: ["Godot", "GDScript", "3D", "Puzzle"]
+    },
+    {
+        name: "Rescue Protocol",
+        image: "assets/images/projects/rescue_protocol/rescue_home.png",
+        banner: "assets/images/projects/rescue_protocol/rescue_banner.png",
+        description: "Top-down sci-fi bullet-hell where you rescue survivors to grow your party — at a cost.",
+        longDescription: "Rescue Protocol is a top-down sci-fi bullet-hell focused on survival and risk/reward. Rescue survivors scattered around the map to increase your health and party size — but a larger party makes you a bigger target. Enemy waves increase in number and attack variety across rounds. Built in C++ with SDL3 following OOP principles (player, enemies, object pooling, state machine). Currently a work-in-progress; a downloadable build will be provided once finalised.",
+        playable: null, // set to downloadable URL (or itch/GDrive) when ready
+        links: [
+            // { label: "GitHub", url: "https://github.com/gingeapple182/rescue-protocol" } // add if you push source
+        ],
+        screenshots: [
+            "assets/images/projects/rescue_protocol/rescue_1.png",
+            "assets/images/projects/rescue_protocol/rescue_2.png"
+        ],
+        tech: ["C++", "SDL3", "OOP"]
     },
     {
         name: "The Swiggles Game",
@@ -41,6 +54,24 @@ const projects = [
             "assets/images/projects/swiggle/swiggle_5.png",
         ],
         tech: ["HTML5", "CSS3", "JavaScript", "p5-JS", "GitHub"]
+    },
+    {
+        name: "GRONK 2",
+        image: "assets/images/projects/gronk_2/gronk_2_home.png",
+        banner: "assets/images/projects/gronk_2/gronk_2_banner.png",
+        description: "A 2D platformer built in Godot as a personal project, inspired by classic platformers like Mario.",
+        longDescription: "GRONK 2 is a personal project developed in Godot to expand my skills in coding and game design, drawing inspiration from classic 2D platformers such as Mario. The game features core platformer mechanics, including enemy encounters, coin collection, and basic player movement. I am solely responsible for all aspects of development, using a mix of asset packs and my own growing art skills. Future plans include adding more enemy types, dynamic player movement, and expanded interactions. The name 'GRONK 2' is a nod to my first-year university project, as I'm admittedly not great at naming games. Feedback from friends has been positive and motivates ongoing development.",
+        playable: "https://gingeapple182.itch.io/gronk-2",
+        links: [
+            { label: "Itch.io", url: "https://gingeapple182.itch.io/gronk-2" },
+            { label: "GitHub", url: "https://github.com/gingeapple182/GRONK-2" }
+        ],
+        screenshots: [
+            "assets/images/projects/gronk_2/gronk_2_1.png",
+            "assets/images/projects/gronk_2/gronk_2_2.png",
+            "assets/images/projects/gronk_2/gronk_2_3.png"
+        ],
+        tech: ["Godot", "GitHub"]
     },
     {
         name: "The Floor is Lava",
