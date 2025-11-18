@@ -21,8 +21,8 @@ const projects = [
     },
     {
         name: "Rescue Protocol",
-        image: "assets/images/projects/rescue_protocol/rescue_home.png",
-        banner: "assets/images/projects/rescue_protocol/rescue_banner.png",
+        image: "assets/images/projects/rescue_protocol/rescue_protocol_1.png",
+        banner: "assets/images/projects/rescue_protocol/rescue_protocol_1.png",
         description: "Top-down sci-fi bullet-hell where you rescue survivors to grow your party — at a cost.",
         longDescription: "Rescue Protocol is a top-down sci-fi bullet-hell focused on survival and risk/reward. Rescue survivors scattered around the map to increase your health and party size — but a larger party makes you a bigger target. Enemy waves increase in number and attack variety across rounds. Built in C++ with SDL3 following OOP principles (player, enemies, object pooling, state machine). Currently a work-in-progress; a downloadable build will be provided once finalised.",
         playable: null, // set to downloadable URL (or itch/GDrive) when ready
@@ -30,8 +30,11 @@ const projects = [
             // { label: "GitHub", url: "https://github.com/gingeapple182/rescue-protocol" } // add if you push source
         ],
         screenshots: [
-            "assets/images/projects/rescue_protocol/rescue_1.png",
-            "assets/images/projects/rescue_protocol/rescue_2.png"
+            "assets/images/projects/rescue_protocol/rescue_protocol_1.png",
+            "assets/images/projects/rescue_protocol/rescue_protocol_2.png",
+            "assets/images/projects/rescue_protocol/rescue_protocol_3.png",
+            "assets/images/projects/rescue_protocol/rescue_protocol_4.png",
+            "assets/images/projects/rescue_protocol/rescue_protocol_5.png"
         ],
         tech: ["C++", "SDL3", "OOP"]
     },
