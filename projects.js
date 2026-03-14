@@ -35,19 +35,19 @@ const projects = [
         tech: ["Godot", "GDScript", "3D", "GitHub"]
     },
     {
-    name: "COMP3015 CW1 - Lightsaber Rendering Project",
-    image: "assets/images/projects/comp3015_cw1/comp3015_cw1_home.png",
-    banner: "assets/images/projects/comp3015_cw1/comp3015_cw1_banner.png",
-    description: "An OpenGL graphics prototype centred on a rendered lightsaber with custom shaders, blade glow, and post-processing effects.",
-    longDescription: "COMP3015 CW1 - Lightsaber Rendering Project is an OpenGL prototype focused on real-time lighting, texturing, and post-processing. The scene centres on a textured 3D lightsaber hilt using diffuse and normal mapping, alongside a toggleable glowing blade created through emissive rim lighting and additive blending. The project also includes optional visual effects such as fog, edge detection, and texture mixing, while using GLSL shaders and Blinn-Phong lighting to build a stylised but technically grounded rendering setup. This coursework helped strengthen my understanding of shader programming, material rendering, lighting behaviour, and visual effect implementation in real-time graphics.",
-    playable: null,
-    links: [
-        { label: "GitHub", url: "https://github.com/gingeapple182/COMP3015-CW1" }
-    ],
-    screenshots: [
-        "assets/images/projects/comp3015/CW1_demo.mp4",
-    ],
-    tech: ["C++", "OpenGL", "GitHub"]
+        name: "COMP3015 CW1 - Lightsaber Rendering Project",
+        image: "assets/images/projects/comp3015_cw1/comp3015_cw1_home.png",
+        banner: "assets/images/projects/comp3015_cw1/comp3015_cw1_banner.png",
+        description: "An OpenGL graphics prototype centred on a rendered lightsaber with custom shaders, blade glow, and post-processing effects.",
+        longDescription: "COMP3015 CW1 - Lightsaber Rendering Project is an OpenGL prototype focused on real-time lighting, texturing, and post-processing. The scene centres on a textured 3D lightsaber hilt using diffuse and normal mapping, alongside a toggleable glowing blade created through emissive rim lighting and additive blending. The project also includes optional visual effects such as fog, edge detection, and texture mixing, while using GLSL shaders and Blinn-Phong lighting to build a stylised but technically grounded rendering setup. This coursework helped strengthen my understanding of shader programming, material rendering, lighting behaviour, and visual effect implementation in real-time graphics.",
+        playable: null,
+        links: [
+            { label: "GitHub", url: "https://github.com/gingeapple182/COMP3015-CW1" }
+        ],
+        screenshots: [
+            "assets/images/projects/comp3015/CW1_demo.mp4"
+        ],
+        tech: ["C++", "OpenGL", "GitHub"]
     },
     {
         name: "COMP3016 CW1 -Rescue Protocol",
@@ -57,7 +57,7 @@ const projects = [
         longDescription: "Rescue Protocol is a top-down sci-fi bullet-hell focused on survival and risk/reward. Rescue survivors scattered around the map to increase your health and party size — but a larger party makes you a bigger target. Enemy waves increase in number and attack variety across rounds. Built in C++ with SDL3 following OOP principles (player, enemies, object pooling, state machine). Currently a work-in-progress; a downloadable build will be provided once finalised.",
         playable: null,
         links: [
-            { label: "GitHub", url: "https://github.com/gingeapple182/COMP3016-CW1" }ce
+            { label: "GitHub", url: "https://github.com/gingeapple182/COMP3016-CW1" }
         ],
         screenshots: [
             "assets/images/projects/comp3016/CW1_start.png",
@@ -69,22 +69,22 @@ const projects = [
         tech: ["C++", "SDL3", "GitHub"]
     },
     {
-    name: "COMP3016 CW2 - Beneath Ancient Sands",
-    image: "assets/images/projects/comp3016_cw2/comp3016_cw2_home.png",
-    banner: "assets/images/projects/comp3016_cw2/comp3016_cw2_banner.png",
-    description: "A first-person OpenGL exploration prototype set in an ancient desert with ruins, caves, and a hidden Sith artefact.",
-    longDescription: "COMP3016 CW2 - Beneath Ancient Sands is a first-person exploration prototype developed in C++ using OpenGL 4.x. Set within an ancient desert landscape, the project features procedurally generated sand dunes, partially buried ruins, and a hidden cave containing the main objective: an ancient Sith artefact. The prototype focuses on real-time rendering, atmospheric environment design, player movement, and spatial audio, with collectible coins placed throughout the world to encourage exploration beyond the critical path. This project helped develop my understanding of environment construction, runtime model integration, terrain generation, and immersive scene presentation within a custom graphics pipeline.",
-    playable: null,
-    links: [
-        { label: "GitHub", url: "https://github.com/gingeapple182/COMP3016-CW2" }
-    ],
-    screenshots: [
-        "assets/images/projects/comp3016/CW2_sands.png",
-        "assets/images/projects/comp3016/CW2_cave_exterior.png",
-        "assets/images/projects/comp3016/CW2_cave_interior.png",
-        "assets/images/projects/comp3016/CW2_objective.mp4"
-    ],
-    tech: ["C++", "OpenGL", "GLSL", "GitHub"]
+        name: "COMP3016 CW2 - Beneath Ancient Sands",
+        image: "assets/images/projects/comp3016_cw2/comp3016_cw2_home.png",
+        banner: "assets/images/projects/comp3016_cw2/comp3016_cw2_banner.png",
+        description: "A first-person OpenGL exploration prototype set in an ancient desert with ruins, caves, and a hidden Sith artefact.",
+        longDescription: "COMP3016 CW2 - Beneath Ancient Sands is a first-person exploration prototype developed in C++ using OpenGL 4.x. Set within an ancient desert landscape, the project features procedurally generated sand dunes, partially buried ruins, and a hidden cave containing the main objective: an ancient Sith artefact. The prototype focuses on real-time rendering, atmospheric environment design, player movement, and spatial audio, with collectible coins placed throughout the world to encourage exploration beyond the critical path. This project helped develop my understanding of environment construction, runtime model integration, terrain generation, and immersive scene presentation within a custom graphics pipeline.",
+        playable: null,
+        links: [
+            { label: "GitHub", url: "https://github.com/gingeapple182/COMP3016-CW2" }
+        ],
+        screenshots: [
+            "assets/images/projects/comp3016/CW2_sands.png",
+            "assets/images/projects/comp3016/CW2_cave_exterior.png",
+            "assets/images/projects/comp3016/CW2_cave_interior.png",
+            "assets/images/projects/comp3016/CW2_objective.mp4"
+        ],
+        tech: ["C++", "OpenGL", "GLSL", "GitHub"]
     },
     {
         name: "The Swiggles Game",
