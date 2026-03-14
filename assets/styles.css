@@ -98,13 +98,12 @@ h2 {
    ========================= */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     justify-items: center;
 }
 
 .card {
-    max-width: 500px;
     width: 100%;
     background: var(--card-bg);
     border-radius: 16px;
@@ -187,17 +186,57 @@ body.skills-page .card img {
 }
 
 /* =========================
+   Project category sections
+   ========================= */
+.project-category {
+    margin-bottom: 3rem;
+}
+
+.project-category h3 {
+    color: var(--heading);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Ensure project grids stack vertically */
+#project-cards-container {
+    display: block;
+}
+
+#project-cards-container.homepage-cards {
+    display: grid;
+}
+
+#project-cards-container > div {
+    display: block;
+    width: 100%;
+}
+
+/* Homepage cards in 2-column grid */
+.homepage-cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.homepage-cards .card {
+    max-width: 500px;
+}
+
+/* =========================
    Responsive Layout
    ========================= */
 @media (max-width: 768px) {
     .cards {
         grid-template-columns: 1fr;
         gap: 1rem;
-        justify-items: center;
     }
     .card {
         width: 100%;
         max-width: 95vw;
+    }
+    .homepage-cards {
+        grid-template-columns: 1fr;
     }
 }
 

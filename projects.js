@@ -6,8 +6,9 @@
 const projects = [
     {
         name: "COMP3000 Final Year Project",
+        category: "University",
         image: "assets/images/projects/comp3000/comp3000_home.png",
-        banner: "assets/images/projects/comp3000/comp3000_banner.png",
+        banner: "assets/images/projects/comp3000/comp3000_home.png",
         description: "3D puzzle game where you use basic logic gates to repair a hilariously broken office.",
         longDescription: "COMP3000 Final Year Project is a 3D puzzle game built in Godot. Play as a new tech hire in an incompetently set-up office where systems are broken or behaving oddly. Solve environmental puzzles by wiring and applying foundational logic gates (AND, NOT, XOR) to restore devices, servers and machinery. Designed to teach and apply computing logic through interactive level design. Currently in active development.",
         playable: null,
@@ -17,12 +18,13 @@ const projects = [
         screenshots: [
             // add screenshots when available
         ],
-        tech: ["Godot", "GDScript", "3D", "GitHub"]
+        tech: ["Godot", "GDScript", "GitHub"]
     },
     {
         name: "COMP3013 Group Project - Regal Mail",
-        image: "assets/images/projects/regal_mail/regal_mail_home.png",
-        banner: "assets/images/projects/regal_mail/regal_mail_banner.png",
+        category: "University",
+        image: "assets/images/projects/comp3013/comp3013_home.png",
+        banner: "assets/images/projects/comp3013/comp3013_home.png",
         description: "Group project to build a marketable and published game.",
         longDescription: "COMP3013 Group Project - Regal Mail - You are a delivery worker who must deliver packages to all sorts of clients, make sure you get it right as clients tend to react badly to incorrect deliveries! Built in Godot using GDScript, Currently in active development with plans for publishing.",
         playable: null,
@@ -32,12 +34,13 @@ const projects = [
         screenshots: [
             // add screenshots when available
         ],
-        tech: ["Godot", "GDScript", "3D", "GitHub"]
+        tech: ["Godot", "GDScript", "GitHub"]
     },
     {
         name: "COMP3015 CW1 - Lightsaber Rendering Project",
-        image: "assets/images/projects/comp3015_cw1/comp3015_cw1_home.png",
-        banner: "assets/images/projects/comp3015_cw1/comp3015_cw1_banner.png",
+        category: "University",
+        image: "assets/images/projects/comp3015/COMP3015_CW1_home.png",
+        banner: "assets/images/projects/comp3015/COMP3015_CW1_home.png",
         description: "An OpenGL graphics prototype centred on a rendered lightsaber with custom shaders, blade glow, and post-processing effects.",
         longDescription: "COMP3015 CW1 - Lightsaber Rendering Project is an OpenGL prototype focused on real-time lighting, texturing, and post-processing. The scene centres on a textured 3D lightsaber hilt using diffuse and normal mapping, alongside a toggleable glowing blade created through emissive rim lighting and additive blending. The project also includes optional visual effects such as fog, edge detection, and texture mixing, while using GLSL shaders and Blinn-Phong lighting to build a stylised but technically grounded rendering setup. This coursework helped strengthen my understanding of shader programming, material rendering, lighting behaviour, and visual effect implementation in real-time graphics.",
         playable: null,
@@ -45,14 +48,18 @@ const projects = [
             { label: "GitHub", url: "https://github.com/gingeapple182/COMP3015-CW1" }
         ],
         screenshots: [
+            "assets/images/projects/comp3015/CW1_base.png",
+            "assets/images/projects/comp3015/CW1_blue.png",
+            "assets/images/projects/comp3015/CW1_rust.png",
             "assets/images/projects/comp3015/CW1_demo.mp4"
         ],
-        tech: ["C++", "OpenGL", "GitHub"]
+        tech: ["CPlusPlus", "OpenGL", "GitHub"]
     },
     {
-        name: "COMP3016 CW1 -Rescue Protocol",
-        image: "assets/images/projects/rescue_protocol/rescue_protocol_1.png",
-        banner: "assets/images/projects/rescue_protocol/rescue_protocol_1.png",
+        name: "COMP3016 CW1 - Rescue Protocol",
+        category: "University",
+        image: "assets/images/projects/comp3016/COMP3016_CW1_home.png",
+        banner: "assets/images/projects/comp3016/COMP3016_CW1_home.png",
         description: "Top-down sci-fi bullet-hell where you rescue survivors to grow your party — at a cost.",
         longDescription: "Rescue Protocol is a top-down sci-fi bullet-hell focused on survival and risk/reward. Rescue survivors scattered around the map to increase your health and party size — but a larger party makes you a bigger target. Enemy waves increase in number and attack variety across rounds. Built in C++ with SDL3 following OOP principles (player, enemies, object pooling, state machine). Currently a work-in-progress; a downloadable build will be provided once finalised.",
         playable: null,
@@ -66,12 +73,13 @@ const projects = [
             "assets/images/projects/comp3016/CW1_play_2.png",
             "assets/images/projects/comp3016/CW1_end.png"
         ],
-        tech: ["C++", "SDL3", "GitHub"]
+        tech: ["CPlusPlus", "OpenGL", "GitHub"]
     },
     {
         name: "COMP3016 CW2 - Beneath Ancient Sands",
-        image: "assets/images/projects/comp3016_cw2/comp3016_cw2_home.png",
-        banner: "assets/images/projects/comp3016_cw2/comp3016_cw2_banner.png",
+        category: "University",
+        image: "assets/images/projects/comp3016/COMP3016_CW2_home.png",
+        banner: "assets/images/projects/comp3016/CW2_sands.png",
         description: "A first-person OpenGL exploration prototype set in an ancient desert with ruins, caves, and a hidden Sith artefact.",
         longDescription: "COMP3016 CW2 - Beneath Ancient Sands is a first-person exploration prototype developed in C++ using OpenGL 4.x. Set within an ancient desert landscape, the project features procedurally generated sand dunes, partially buried ruins, and a hidden cave containing the main objective: an ancient Sith artefact. The prototype focuses on real-time rendering, atmospheric environment design, player movement, and spatial audio, with collectible coins placed throughout the world to encourage exploration beyond the critical path. This project helped develop my understanding of environment construction, runtime model integration, terrain generation, and immersive scene presentation within a custom graphics pipeline.",
         playable: null,
@@ -81,14 +89,15 @@ const projects = [
         screenshots: [
             "assets/images/projects/comp3016/CW2_sands.png",
             "assets/images/projects/comp3016/CW2_cave_exterior.png",
-            "assets/images/projects/comp3016/CW2_cave_interior.png",
-            "assets/images/projects/comp3016/CW2_objective.mp4"
+            "assets/images/projects/comp3016/CW2_cave_interior.png"
+            //"assets/images/projects/comp3016/CW2_objective.mp4"
         ],
-        tech: ["C++", "OpenGL", "GLSL", "GitHub"]
+        tech: ["CPlusPlus", "OpenGL", "GitHub"]
     },
     {
-        name: "The Swiggles Game",
-        image: "assets/images/projects/swiggle/swiggle_home.png",
+        name: "COMP2003 - The Swiggles Game",
+        category: "University",
+        image: "assets/images/projects/swiggle/COMP2003_home.png",
         banner: "assets/images/projects/swiggle/swiggle_banner.png",
         description: "A web game for children aged 5–9, teaching internet safety through interactive minigames. Developed as a university team project with SWGfL.",
         longDescription: "The Swiggles Game is an educational web game designed to teach children aged 5–9 about internet safety, with a particular focus on safe searching. Developed as a year-long university team project in collaboration with SWGfL, the game features three engaging minigames: a wordsearch, a drag-and-drop sorting activity, and a quiz that allows children to review their answers. Built using HTML, CSS, JavaScript, and the P5.js library, I served as team lead and was responsible for the quiz minigame as well as client communication. Our client was extremely pleased with the outcome and expressed interest in using the game as a future learning tool for children.",
@@ -108,6 +117,7 @@ const projects = [
     },
     {
         name: "GRONK 2",
+        category: "Personal",
         image: "assets/images/projects/gronk_2/gronk_2_home.png",
         banner: "assets/images/projects/gronk_2/gronk_2_banner.png",
         description: "A 2D platformer built in Godot as a personal project, inspired by classic platformers like Mario.",
@@ -125,8 +135,9 @@ const projects = [
         tech: ["Godot", "GitHub"]
     },
     {
-        name: "The Floor is Lava",
-        image: "assets/images/projects/tfil/tfil_home.png",
+        name: "COMP2007 - The Floor is Lava",
+        category: "University",
+        image: "assets/images/projects/tfil/COMP2007_home.png",
         banner: "assets/images/projects/tfil/tfil_banner.png",
         description: "A 3D platformer built in Unity where players must escape rising lava by interacting with the environment.",
         longDescription: "The Floor is Lava is a 3D platformer developed in Unity as a university assignment for my game development module. Players navigate a hazardous facility, using physics-based movement and interacting with the world—such as picking up objects, opening doors, and extending bridges—to escape rising lava that increases in speed. I was solely responsible for the project, combining Unity Asset Store resources with custom elements. The game received positive feedback, and with more time, I would have expanded its features further.",
@@ -138,8 +149,9 @@ const projects = [
         tech: ["Unity", "CSharp", "GitHub"]
     },
     {
-        name: "GRONK",
-        image: "assets/images/projects/gronk/gronk_home.png",
+        name: "COMP1004 - GRONK",
+        category: "University",
+        image: "assets/images/projects/gronk/COMP1004_home.png",
         banner: "assets/images/projects/gronk/gronk_banner.png",
         description: "A top-down adventure game built as a single-page web app for my first year university project.",
         longDescription: "GRONK is a top-down adventure game developed as a single-page web application for my first year university project. Players control a character using only the keyboard to explore a map, interact with enemies, and experience encounter screens where choices can be made. The game was built entirely by myself using HTML, JavaScript, and the P5.js library, with no prior coding or game design experience. This project marked my introduction to programming and game development, and was well received by my lecturers.",
@@ -169,6 +181,7 @@ const projects = [
     },*/
     {
         name: "PICO-8 Projects",
+        category: "Personal",
         image: "assets/images/projects/pico_8/pico8_home.png", // placeholder or logo
         banner: "assets/images/projects/pico_8/pico8_banner.png",
         description: "A collection of small, retro-inspired games made with PICO-8. All games are playable right here!",
@@ -218,7 +231,6 @@ const projects = [
 // Dynamically creates project cards and inserts them into the container.
 function generateProjectCards() {
     const container = document.getElementById("project-cards-container");
-    container.innerHTML = "";
 
     // Show only a subset on the homepage, all on the projects page
     const isHomePage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
@@ -230,11 +242,61 @@ function generateProjectCards() {
         if (blenderIdx > 1) {
             projectsToDisplay.push(projects[blenderIdx]);
         }
+        container.classList.add('homepage-cards');
+        container.innerHTML = "";
     } else {
-        projectsToDisplay = projects;
+        // On projects page, show university projects first in the main grid, then personal in a grid below
+        const universityProjects = projects.filter(p => p.category !== "Personal");
+        const personalProjects = projects.filter(p => p.category === "Personal");
+
+        container.innerHTML = `
+            <div class="project-category" id="project-category-university">
+                <h3>University Projects</h3>
+                <div class="cards" id="project-cards-university"></div>
+            </div>
+            <div class="project-category" id="project-category-personal">
+                <h3>Personal Projects</h3>
+                <div class="cards" id="project-cards-personal"></div>
+            </div>
+        `;
+
+        // Render university projects in the main grid
+        const uniContainer = document.getElementById("project-cards-university");
+        universityProjects.forEach(project => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `
+                <img src="${project.image}" alt="${project.name}">
+                <h3>${project.name}</h3>
+                <p>${project.description}</p>
+                <button class="button more-details-btn">More Details</button>
+            `;
+            uniContainer.appendChild(card);
+            const btn = card.querySelector('.more-details-btn');
+            btn.addEventListener('click', () => openProjectModal(project));
+        });
+
+        // Render personal projects in their grid below
+        const personalContainer = document.getElementById("project-cards-personal");
+        personalProjects.forEach(project => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.innerHTML = `
+                <img src="${project.image}" alt="${project.name}">
+                <h3>${project.name}</h3>
+                <p>${project.description}</p>
+                <button class="button more-details-btn">More Details</button>
+            `;
+            personalContainer.appendChild(card);
+            const btn = card.querySelector('.more-details-btn');
+            btn.addEventListener('click', () => openProjectModal(project));
+        });
+
+        return; // Skip the general loop
     }
 
-    projectsToDisplay.forEach((project, idx) => {
+    // General loop for homepage
+    projectsToDisplay.forEach(project => {
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -242,18 +304,13 @@ function generateProjectCards() {
             <img src="${project.image}" alt="${project.name}">
             <h3>${project.name}</h3>
             <p>${project.description}</p>
-            <button class="button more-details-btn" data-project-index="${idx}">More Details</button>
+            <button class="button more-details-btn">More Details</button>
         `;
 
         container.appendChild(card);
-    });
 
-    // Attach event listeners to "More Details" buttons to open the modal
-    document.querySelectorAll('.more-details-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const idx = this.getAttribute('data-project-index');
-            openProjectModal(projectsToDisplay[idx]);
-        });
+        const btn = card.querySelector('.more-details-btn');
+        btn.addEventListener('click', () => openProjectModal(project));
     });
 }
 
