@@ -7,8 +7,8 @@ const projects = [
     {
         name: "COMP3000 Final Year Project",
         category: "University",
-        image: "assets/images/projects/comp3000/comp3000_home.png",
-        banner: "assets/images/projects/comp3000/comp3000_home.png",
+        image: "assets/images/projects/comp3000/COMP3000_home.png",
+        banner: "assets/images/projects/comp3000/COMP3000_home.png",
         description: "3D puzzle game where you use basic logic gates to repair a hilariously broken office.",
         longDescription: "COMP3000 Final Year Project is a 3D puzzle game built in Godot. Play as a new tech hire in an incompetently set-up office where systems are broken or behaving oddly. Solve environmental puzzles by wiring and applying foundational logic gates (AND, NOT, XOR) to restore devices, servers and machinery. Designed to teach and apply computing logic through interactive level design. Currently in active development.",
         playable: null,
@@ -23,8 +23,8 @@ const projects = [
     {
         name: "COMP3013 Group Project - Regal Mail",
         category: "University",
-        image: "assets/images/projects/comp3013/comp3013_home.png",
-        banner: "assets/images/projects/comp3013/comp3013_home.png",
+        image: "assets/images/projects/comp3013/COMP3013_home.png",
+        banner: "assets/images/projects/comp3013/COMP3013_home.png",
         description: "Group project to build a marketable and published game.",
         longDescription: "COMP3013 Group Project - Regal Mail - You are a delivery worker who must deliver packages to all sorts of clients, make sure you get it right as clients tend to react badly to incorrect deliveries! Built in Godot using GDScript, Currently in active development with plans for publishing.",
         playable: null,
