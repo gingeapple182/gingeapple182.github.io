@@ -56,6 +56,25 @@ const projects = [
         tech: ["CPlusPlus", "OpenGL", "GitHub"]
     },
     {
+        name: "COMP3015 CW2 - X-Wing Racer",
+        category: "University",
+        image: "assets/images/projects/comp3015/COMP3015_CW2_home.png",
+        banner: "assets/images/projects/comp3015/COMP3015_CW2_home.png",
+        description: "A playable OpenGL lane-runner prototype combining real-time rendering, animated water, particle effects, shadow mapping, bitmap UI, and arcade-style obstacle gameplay.",
+        longDescription: "COMP3015 CW2 - X-Wing Racer is a real-time OpenGL graphics project developed into a small playable lane-runner game. The project places the player in control of an X-Wing flying over an animated ocean while avoiding incoming TIE fighters, turning a technical graphics prototype into a more complete interactive experience. It combines several advanced rendering and gameplay systems, including layered procedural wave animation, shadow mapping, instanced engine particles, explosion and smoke effects, bitmap-based UI text rendering, audio integration, collision handling, score tracking, and increasing game speed over time. While earlier foundational features such as textured model rendering, normal mapping, skybox rendering, and Blinn-Phong lighting remain part of the final scene, the main focus of this coursework was on building new CW2 systems and integrating them into a cohesive game-like structure. This project helped strengthen my understanding of shader programming, particle systems, render passes, gameplay state management, and how to bring multiple graphics techniques together into a more polished real-time prototype.",
+        playable: null,
+        links: [
+            { label: "GitHub", url: "https://github.com/gingeapple182/COMP3015-CW2" }
+        ],
+        screenshots: [
+            "assets/images/projects/comp3015/CW2_start.png",
+            "assets/images/projects/comp3015/CW2_play.png",
+            "assets/images/projects/comp3015/CW2_end.png",
+            "assets/images/projects/comp3015/CW2_demo.mp4"
+        ],
+        tech: ["CPlusPlus", "OpenGL", "GitHub"]
+    },
+    {
         name: "COMP3016 CW1 - Rescue Protocol",
         category: "University",
         image: "assets/images/projects/comp3016/COMP3016_CW1_home.png",
