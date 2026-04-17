@@ -366,9 +366,12 @@ function openProjectModal(project) {
     // Build screenshots gallery if screenshots exist
     const screenshotsHtml = project.screenshots && project.screenshots.length
         ? `<div class="project-modal-screenshots">
-            ${project.screenshots.map((src, i) =>
-                `<img src="${src}" alt="${project.name} screenshot ${i+1}" class="project-modal-screenshot">`
-            ).join('')}
+            ${project.screenshots.map((src, i) => {
+                const isVideo = src.toLowerCase().endsWith('.mp4');
+                return isVideo
+                    ? `<video src="${src}" controls class="project-modal-screenshot" alt="${project.name} screenshot ${i+1}"></video>`
+                    : `<img src="${src}" alt="${project.name} screenshot ${i+1}" class="project-modal-screenshot">`;
+            }).join('')}
         </div>`
         : "";
 
@@ -437,6 +440,10 @@ function openProjectModal(project) {
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox-overlay';
         lightbox.tabIndex = -1;
+        const isVideo = screenshots[currentIdx].toLowerCase().endsWith('.mp4');
+        const mediaHtml = isVideo
+            ? `<video src="${screenshots[currentIdx]}" controls class="lightbox-media" alt="Screenshot ${currentIdx + 1}"></video>`
+            : `<img src="${screenshots[currentIdx]}" class="lightbox-media" alt="Screenshot ${currentIdx + 1}">`;
         lightbox.innerHTML = `
             <div class="lightbox-content">
                 <button class="lightbox-close" aria-label="Close">&times;</button>
@@ -445,7 +452,7 @@ function openProjectModal(project) {
                     <path d="M18 22L10 14L18 6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </button>
-                <img src="${screenshots[currentIdx]}" class="lightbox-img" alt="Screenshot ${currentIdx + 1}">
+                ${mediaHtml}
                 <button class="lightbox-arrow lightbox-next" aria-label="Next">
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
                     <path d="M10 6L18 14L10 22" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -463,11 +470,16 @@ function openProjectModal(project) {
         }
         updateArrows();
 
-        // Update image
+        // Update media
         function showImage(idx) {
             currentIdx = idx;
-            lightbox.querySelector('.lightbox-img').src = screenshots[currentIdx];
-            lightbox.querySelector('.lightbox-img').alt = `Screenshot ${currentIdx + 1}`;
+            const isVideo = screenshots[currentIdx].toLowerCase().endsWith('.mp4');
+            const mediaContainer = lightbox.querySelector('.lightbox-content');
+            const mediaElement = mediaContainer.querySelector('.lightbox-media');
+            const newMediaHtml = isVideo
+                ? `<video src="${screenshots[currentIdx]}" controls class="lightbox-media" alt="Screenshot ${currentIdx + 1}"></video>`
+                : `<img src="${screenshots[currentIdx]}" class="lightbox-media" alt="Screenshot ${currentIdx + 1}">`;
+            mediaElement.outerHTML = newMediaHtml;
             updateArrows();
         }
 
