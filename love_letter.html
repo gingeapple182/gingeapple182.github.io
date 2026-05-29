@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,16 +92,17 @@
         }
 
         .typing::after {
-        content: "|";
-        animation: blink 1s infinite;
-        color: var(--accent-color);
+            content: "|";
+            animation: blink 1s infinite;
+            color: var(--accent-color);
         }
 
         @keyframes blink {
             50% {
                 opacity: 0;
             }
-        }   
+        }
+
         /* Progress indicator at the bottom */
         .hint {
             margin-top: 30px;
@@ -119,12 +121,21 @@
         }
 
         @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.15); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
+
 <body>
 
     <canvas id="animationCanvas"></canvas>
@@ -132,114 +143,95 @@
     <div class="card" id="letterCard">
         <div class="heart-icon">❤</div>
         <div class="text-container">
-            <p class="active" data-text="I struggle with writing letters, but i wanted to make this for you to try to show you how much you mean to me..."></p>
-            <p data-text="Ever since we first met youve always been the one and only thing on my mind, how beautiful you are, how cool and funny and adorable you are without even trying..."></p>
-            <p data-text="It's super easy to find things about you to love and to obsess over, but as soon as i try to write it down my brain goes blank because i cant put into words how much i love you..."></p>
-            <p data-text="You are perfection and ill always be by your side 5ever. I love you my beautiful princess ❤"></p>
+            <p class="active"
+                data-text="I struggle with writing letters, but i wanted to make this for you to try to show you how much you mean to me...">
+            </p>
+            <p
+                data-text="It's super easy to find things about you to love and to obsess over, but as soon as i try to write it down my brain goes blank because i cant put into words how much i love you...">
+            </p>
+            <p
+                data-text="Ever since we first met youve always been the one and only thing on my mind, how beautiful you are, how cool and funny and adorable you are without even trying...">
+            </p>
+            <p 
+                data-text="You are perfection and ill always be by your side 5ever. I love you my beautiful princess ❤">
+            </p>
         </div>
         <div class="hint" id="progressHint">Click to continue</div>
     </div>
 
     <script>
-        // // --- TEXT NAVIGATION LOGIC ---
-        // const card = document.getElementById('letterCard');
-        // const paragraphs = document.querySelectorAll('.text-container p');
-        // const hint = document.getElementById('progressHint');
-        // let currentIndex = 0;
-
-        // card.addEventListener('click', () => {
-        //     // Remove active class from current paragraph
-        //     paragraphs[currentIndex].classList.remove('active');
-            
-        //     // Move to the next paragraph
-        //     currentIndex++;
-            
-        //     // Check if we reached the end
-        //     if (currentIndex < paragraphs.length) {
-        //         paragraphs[currentIndex].classList.add('active');
-        //         if (currentIndex === paragraphs.length - 1) {
-        //             hint.textContent = "With all my love";
-        //         }
-        //     } else {
-        //         // Loop back to the beginning (or leave it on the last page)
-        //         currentIndex = 0;
-        //         paragraphs[currentIndex].classList.add('active');
-        //         hint.textContent = "Click to continue";
-        //     }
-        // });
-
         // --- TEXT NAVIGATION LOGIC ---
-const card = document.getElementById('letterCard');
-const paragraphs = document.querySelectorAll('.text-container p');
-const hint = document.getElementById('progressHint');
+        const card = document.getElementById('letterCard');
+        const paragraphs = document.querySelectorAll('.text-container p');
+        const hint = document.getElementById('progressHint');
 
-let currentIndex = 0;
-let isTyping = false;
+        let currentIndex = 0;
+        let isTyping = false;
 
-// TYPEWRITER EFFECT
-function typeText(paragraph, text, speed = 120) {
-    return new Promise(resolve => {
-        paragraph.textContent = '';
-        //paragraph.classList.add('active');
-        paragraph.classList.add('active', 'typing');
+        // TYPEWRITER EFFECT
+        function typeText(paragraph, text, speed = 100) {
+            return new Promise(resolve => {
+                paragraph.textContent = '';
+                //paragraph.classList.add('active');
+                paragraph.classList.add('active', 'typing');
 
-        const words = text.split(' ');
-        let index = 0;
+                const words = text.split(' ');
+                let index = 0;
 
-        isTyping = true;
+                isTyping = true;
 
-        const interval = setInterval(() => {
-            paragraph.textContent +=
-                (index === 0 ? '' : ' ') + words[index];
+                const interval = setInterval(() => {
+                    paragraph.textContent +=
+                        (index === 0 ? '' : ' ') + words[index];
 
-            index++;
+                    index++;
 
-            if (index >= words.length) {
-                clearInterval(interval);
-                paragraph.classList.remove('typing');
-                isTyping = false;
-                resolve();
+                    if (index >= words.length) {
+                        clearInterval(interval);
+                        paragraph.classList.remove('typing');
+                        isTyping = false;
+                        resolve();
+                    }
+                }, speed);
+            });
+        }
+
+        // Start first paragraph typing immediately
+        typeText(
+            paragraphs[0],
+            paragraphs[0].dataset.text,
+            110
+        );
+
+        card.addEventListener('click', async () => {
+
+            // Prevent skipping while typing
+            if (isTyping) return;
+
+            // Hide current paragraph
+            paragraphs[currentIndex].classList.remove('active');
+
+            // Move to next paragraph
+            currentIndex++;
+
+            // Loop back to start
+            if (currentIndex >= paragraphs.length) {
+                currentIndex = 0;
+                hint.textContent = "Click to continue";
             }
-        }, speed);
-    });
-}
 
-// Start first paragraph typing immediately
-typeText(
-    paragraphs[0],
-    paragraphs[0].dataset.text,
-    110
-);
+            // Update final hint text
+            if (currentIndex === paragraphs.length - 1) {
+                hint.textContent = "I love you ❤ Click to read again";
+            }
 
-card.addEventListener('click', async () => {
-
-    // Prevent skipping while typing
-    if (isTyping) return;
-
-    // Hide current paragraph
-    paragraphs[currentIndex].classList.remove('active');
-
-    // Move to next paragraph
-    currentIndex++;
-
-    // Loop back to start
-    if (currentIndex >= paragraphs.length) {
-        currentIndex = 0;
-        hint.textContent = "Click to continue";
-    }
-
-    // Update final hint text
-    if (currentIndex === paragraphs.length - 1) {
-        hint.textContent = "With all my love";
-    }
-
-    // Type next paragraph
-    await typeText(
-        paragraphs[currentIndex],
-        paragraphs[currentIndex].dataset.text,
-        110
-    );
-});
+            // Type next paragraph
+            await typeText(
+                paragraphs[currentIndex],
+                paragraphs[currentIndex].dataset.text,
+                110
+            );
+        });
 
         // --- BACKGROUND ANIMATION LOGIC (Flowers & Sparkles) ---
         const canvas = document.getElementById('animationCanvas');
@@ -263,7 +255,7 @@ card.addEventListener('click', async () => {
                 this.speedY = Math.random() * 1.5 + 0.5;
                 this.speedX = Math.random() * 1 - 0.5;
                 this.opacity = Math.random() * 0.5 + 0.3;
-                
+
                 // Petal specific properties
                 this.angle = Math.random() * Math.PI * 2;
                 this.spin = Math.random() * 0.02 - 0.01;
@@ -272,7 +264,7 @@ card.addEventListener('click', async () => {
             update() {
                 this.y += this.speedY;
                 this.x += this.speedX + Math.sin(this.y / 30) * 0.5; // gentle swaying
-                
+
                 if (this.type === 'petal') {
                     this.angle += this.spin;
                 }
@@ -329,4 +321,5 @@ card.addEventListener('click', async () => {
         animate();
     </script>
 </body>
+
 </html>
