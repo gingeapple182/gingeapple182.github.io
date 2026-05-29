@@ -185,19 +185,6 @@ const projects = [
         ],
         tech: ["HTML5", "JavaScript", "p5-JS", "GitHub"]
     },
-    /*{
-        name: "Blender Projects",
-        image: "assets/images/projects/blender/blender_home.png",
-        banner: "assets/images/projects/blender/blender_banner.png",
-        description: "A growing collection of 3D models and animations created as I learn Blender and 3D design.",
-        longDescription: "This project is an ongoing showcase of my journey learning Blender and 3D modelling. Starting with beginner tutorials like the classic Blender doughnut, I am gradually exploring more advanced techniques, including modelling, texturing, rigging, and animation. Each model or animation represents a new skill or concept I've practiced, and this space will continue to grow as I take on new challenges and experiment with different styles and workflows. Whether it's following tutorials or creating original work, this collection highlights my progress and enthusiasm for 3D art.",
-        playable: null,
-        links: [
-        ],
-        screenshots: [
-        ],
-        tech: ["Blender"]
-    },*/
     {
         name: "PICO-8 Projects",
         category: "Personal",
